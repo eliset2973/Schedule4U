@@ -1,9 +1,9 @@
 # Schedule4U
 Repository for code for Android Studios Dev of Schedule4U
 
-Clark Harty 
-Jin Kang 
-Ioana Muntenic 
-Angel Sylvester
-Elise Tran 
-Yi Zhang
+Clark Harty \n
+Jin Kang \n
+Ioana Muntenic \n
+Angel Sylvester \n
+Elise Tran \n
+Yi Zhang \n
