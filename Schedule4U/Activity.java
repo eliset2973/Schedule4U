@@ -1,3 +1,4 @@
+import java.util.Date;
 public class Activity {
     // used Create Task page for reference
     public String name;
@@ -13,11 +14,16 @@ public class Activity {
     public Activity() {
         this.name = "Name placeholder";
         this.time_alotted = 60;
-        this.complete_task_by = Date(System.currentTimeMillis()+1000*60*60*24*7);
+        this.complete_task_by = new Date(System.currentTimeMillis()+1000*60*60*24*7);
         this.importance = 2;
-        this.start_time = Date(System.currentTimeMillis()+1000*60*60*24*6);
-        this.end_time = Date(System.currentTimeMillis()+1000*60*60*24*7);
+        this.start_time = new Date(System.currentTimeMillis()+1000*60*60*24*6);
+        this.end_time = new Date(System.currentTimeMillis()+1000*60*60*24*7);
         this.details = "Details placeholder";
         this.splitTask = 1;
     }
+
+    /*public static void main(String[] args) {
+        Activity test_activity = new Activity();
+        System.out.println(test_activity.time_alotted);
+    }*/
 }
