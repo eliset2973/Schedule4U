@@ -64,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        // deleted Items screen
+//        Button delete = (Button) findViewById(R.id.button13);
+//        delete.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                Intent myIntent = new Intent(view.getContext(), DeletedItems.class);
+//                startActivityForResult(myIntent, 0);
+//            }
+//
+//        });
+
     }
 
 
