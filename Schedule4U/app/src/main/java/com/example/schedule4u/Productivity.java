@@ -30,8 +30,11 @@ public class Productivity extends AppCompatActivity {
             }
         });
 
-        Button todo = (Button) findViewById(R.id.button7);
-        todo.setOnClickListener(new View.OnClickListener() {
+        //for some reason I'm having trouble linking the button to the proper page.
+        //when you link it to a page like the ToDos or something, it works fine. But not
+        //for the class that I just created 
+        Button productivityAboutMe = (Button) findViewById(R.id.button7);
+        productivityAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), ProductivityAboutMe.class);
                 startActivityForResult(myIntent, 0);
