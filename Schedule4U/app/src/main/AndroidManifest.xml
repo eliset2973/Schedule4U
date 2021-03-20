@@ -33,6 +33,26 @@
             android:name=".ToDos"
             android:label="@string/title_activity_to_dos"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".ToDosAboutMe"
+            android:label="@string/title_activity_to_dos"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".RecommendationsAboutMe"
+            android:label="@string/title_activity_to_dos"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".ProductivityAboutMe"
+            android:label="@string/title_activity_to_dos"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".NotificationsAboutMe"
+            android:label="@string/title_activity_to_dos"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".CalendarAboutMe"
+            android:label="@string/title_activity_to_dos"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
