@@ -16,4 +16,5 @@
     <string name="title_activity_deleted_items">DeletedItems</string>
     <string name="general_meeting">Don\'t forget about your meeting in 5 minutes!</string>
     <string name="delete_notification">Delete notification</string>
+    <string name="take_your_dog_for_a_walk">Take your dog for a walk!</string>
 </resources>
