@@ -14,7 +14,9 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_calendar" />
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_calendar" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -40,5 +42,17 @@
         app:layout_anchor="@+id/appBarLayout3"
         app:layout_anchorGravity="center"
         app:popupTheme="@style/Theme.Schedule4U.PopupOverlay" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="center" />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:translationY="?android:attr/windowTitleSize" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
