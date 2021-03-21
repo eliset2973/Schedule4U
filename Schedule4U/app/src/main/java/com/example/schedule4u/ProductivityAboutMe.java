@@ -1,13 +1,15 @@
 package com.example.schedule4u;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.os.Bundle;
 import android.view.View;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class ProductivityAboutMe extends AppCompatActivity {
 
@@ -26,6 +28,19 @@ public class ProductivityAboutMe extends AppCompatActivity {
 //            }
 //        });
 
+        //Be careful! This is code for image button not ordinarily button//
+        ImageButton homebutton_7= (ImageButton) findViewById(R.id.homebutton7);
+        homebutton_7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+        //Be careful! This is code for image button not ordinarily button//
+
+
+
 
     }
+
 }

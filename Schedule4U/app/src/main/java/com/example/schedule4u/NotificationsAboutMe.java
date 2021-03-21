@@ -1,7 +1,9 @@
 package com.example.schedule4u;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,6 +27,14 @@ public class NotificationsAboutMe extends AppCompatActivity {
 //            }
 //        });
 
-
+//Be careful! This is code for image button not ordinarily button//
+        ImageButton homebutton_5= (ImageButton) findViewById(R.id.homebutton5);
+        homebutton_5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+        //Be careful! This is code for image button not ordinarily button//
     }
 }
