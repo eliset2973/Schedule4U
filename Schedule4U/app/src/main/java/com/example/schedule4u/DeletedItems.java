@@ -1,17 +1,16 @@
 
 package com.example.schedule4u;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class DeletedItems extends AppCompatActivity {
 
@@ -34,7 +33,7 @@ public class DeletedItems extends AppCompatActivity {
         //for some reason I'm having trouble linking the button to the proper page.
         //when you link it to a page like the ToDos or something, it works fine. But not
         //for the class that I just created
-        Button homeFromDelete = (Button) findViewById(R.id.button8);
+        Button homeFromDelete = (Button) findViewById(R.id.HomeButton);
         homeFromDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), MainActivity.class);
@@ -42,5 +41,15 @@ public class DeletedItems extends AppCompatActivity {
             }
 
         });
+
+        //Be careful! This is code for image button not ordinarily button//
+        ImageButton homebutton_2= (ImageButton) findViewById(R.id.homebutton2);
+        homebutton_2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+        //Be careful! This is code for image button not ordinarily button//
     }
 }

@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Productivity extends AppCompatActivity {
 
@@ -41,5 +42,15 @@ public class Productivity extends AppCompatActivity {
             }
 
         });
+
+        //Be careful! This is code for image button not ordinarily button//
+        ImageButton homebutton_6= (ImageButton) findViewById(R.id.homebutton6);
+        homebutton_6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+        //Be careful! This is code for image button not ordinarily button//
     }
 }
