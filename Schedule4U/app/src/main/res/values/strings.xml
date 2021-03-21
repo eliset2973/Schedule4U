@@ -9,9 +9,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_notifications">notifications</string>
+    <string name="title_activity_notifications">Notifications</string>
     <string name="title_activity_productivity">Productivity</string>
     <string name="title_activity_recommendations">Recommendations</string>
     <string name="title_activity_calendar">Calendar</string>
     <string name="title_activity_deleted_items">DeletedItems</string>
+    <string name="general_meeting">Don\'t forget about your meeting in 5 minutes!</string>
+    <string name="delete_notification">Delete notification</string>
 </resources>
