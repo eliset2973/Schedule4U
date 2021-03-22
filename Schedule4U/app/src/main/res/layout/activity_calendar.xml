@@ -17,18 +17,7 @@
 
     <include
         android:id="@+id/include"
-        layout="@layout/content_todos_items" />
-
-    <ImageButton
-        android:id="@+id/homebutton"
-        android:layout_width="53dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homeimage" />
+        layout="@layout/content_calendar" />
 
     <ImageButton
         android:id="@+id/homebutton"
