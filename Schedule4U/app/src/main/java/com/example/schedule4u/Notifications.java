@@ -37,7 +37,7 @@ public class Notifications extends AppCompatActivity {
         Button notifAboutMe = (Button) findViewById(R.id.button10);
         notifAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), ProductivityAboutMe.class);
+                Intent myIntent = new Intent(view.getContext(), NotificationsAboutMe.class);
                 startActivityForResult(myIntent, 0);
             }
 

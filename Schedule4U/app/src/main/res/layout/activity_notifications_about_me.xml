@@ -23,23 +23,25 @@
         android:id="@+id/textView10"
         android:layout_width="286dp"
         android:layout_height="54dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
         android:text="Notifications"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homebutton5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.056" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="286dp"
-        android:layout_height="128dp"
+        android:layout_width="300dp"
+        android:layout_height="229dp"
         android:text="1. The notifications page is meant to notify you about
 your upcoming events, tasks, meetings, and any deadlines you have scheduled through
 the application. Any notifications you wish to receive will populate on this page. "
-        android:textSize="8sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -49,16 +51,16 @@ the application. Any notifications you wish to receive will populate on this pag
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="287dp"
-        android:layout_height="127dp"
+        android:layout_width="292dp"
+        android:layout_height="206dp"
         android:text="2. You may choose to delete any notifications by clicking on the icon to the
 right of each notification. Any deleted tasks and notifications can be viewed and recovered through
 the recycled tasks page that can be visited from the home page."
-        android:textSize="7sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.219" />
 </androidx.constraintlayout.widget.ConstraintLayout>
