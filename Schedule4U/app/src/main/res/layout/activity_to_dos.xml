@@ -5,12 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ToDos"
-    android:background="@drawable/umn_color">>
+    android:background="@drawable/umn_color"><![CDATA[>
+
+
+
+
+
+
+
+
+
+    ]]>
 
     <ImageButton
         android:id="@+id/homebutton10"
-        android:layout_width="66dp"
-        android:layout_height="32dp"
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="48dp"
@@ -25,8 +35,6 @@
         android:theme="@style/Theme.Schedule4U.AppBarOverlay">
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_to_dos" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -52,5 +60,10 @@
         app:layout_anchor="@+id/appBarLayout5"
         app:layout_anchorGravity="top|center"
         app:popupTheme="@style/Theme.Schedule4U.PopupOverlay" />
+
+    <include
+        layout="@layout/content_todos_items"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

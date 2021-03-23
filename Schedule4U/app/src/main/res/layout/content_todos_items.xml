@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="408dp"
         android:text="Edit3"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/task3"
@@ -69,25 +70,32 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
         android:id="@+id/Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
         android:text="Home"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Back"
+        android:id="@+id/back"
         android:layout_width="76dp"
         android:layout_height="38dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="52dp"
         android:text="Back"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Home" />
 
@@ -119,6 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="176dp"
         android:text="Edit1"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/task1"
@@ -130,6 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="288dp"
         android:text="Edit2"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/task2"
@@ -139,8 +149,9 @@
         android:id="@+id/x1"
         android:layout_width="45dp"
         android:layout_height="40dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="176dp"
         android:text="x1"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Edit1"
@@ -151,6 +162,7 @@
         android:layout_width="178dp"
         android:layout_height="58dp"
         android:text="Add NewTask"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.201"
@@ -160,12 +172,13 @@
 
     <Button
         android:id="@+id/deletedItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="148dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="68dp"
         android:text="deletedItems"
+        app:backgroundTint="#FFCC33"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toEndOf="@+id/AddNewTask" />
 </androidx.constraintlayout.widget.ConstraintLayout>
