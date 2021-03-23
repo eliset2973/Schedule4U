@@ -1,5 +1,5 @@
 import java.util.Date;
-public class Activity {
+public class Activity_S4U {
     // used Create Task page for reference
     public String name;
     public int time_alotted; // minutes
@@ -11,7 +11,7 @@ public class Activity {
     public int splitTask;
 
     // for now we just have a 0 argument constructor filled with dummy values
-    public Activity() {
+    public Activity_S4U() {
         this.name = "Name placeholder";
         this.time_alotted = 60;
         this.complete_task_by = new Date(System.currentTimeMillis()+1000*60*60*24*7);
@@ -23,7 +23,7 @@ public class Activity {
     }
 
     /*public static void main(String[] args) {
-        Activity test_activity = new Activity();
+        Activity_S4U test_activity = new Activity_S4U();
         System.out.println(test_activity.time_alotted);
     }*/
 }
