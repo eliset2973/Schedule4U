@@ -17,4 +17,25 @@
     <string name="general_meeting">Don\'t forget about your meeting in 5 minutes!</string>
     <string name="delete_notification">Delete notification</string>
     <string name="take_your_dog_for_a_walk">Take your dog for a walk!</string>
+    <string name="prod_score">Productivity Score</string>
+    <string name="time_spent">Time spent on tasks this week</string>
+    <string name="home">home</string>
+    <string name="about_me">about me</string>
+    <string name="time1">10hr 18min</string>
+    <string name="prod_text1">Finished Tasks: 5hr</string>
+    <string name="prod_text2">Tasks Still in Progress: 1hr</string>
+    <string name="prod_text3">Tasks for Leisure: 2hr 18min</string>
+    <string name="progress">progress</string>
+    <string name="_45_50_points">45/50 points</string>
+    <string name="this_week">this week</string>
+    <string name="oval_white">oval_white</string>
+    <string name="oval_grey1">oval_grey1</string>
+    <string name="oval3">oval3</string>
+    <string name="oval4">oval4</string>
+    <string name="_8">8</string>
+    <string name="_10">10</string>
+    <string name="_14">14</string>
+    <string name="_18">18</string>
+    <string name="mo">Mo</string>
+    <string name="tu">Tu</string>
 </resources>

@@ -1,56 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prod_background"
+    style="@style/TextAppearance.AppCompat.Medium"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Productivity"
-    android:background="@drawable/umn_color">>
+    android:background="@drawable/umn_color"
+    tools:context=".Productivity">
+
+    <TextView
+        android:id="@+id/prod_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="@string/prod_score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/prod_aboutme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/prod_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_time_spent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/time_spent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FDC025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/homebutton6"
-        android:layout_width="66dp"
-        android:layout_height="32dp"
+        android:id="@+id/prod_home"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
+        android:contentDescription="@string/home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homeimage" />
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.Schedule4U.AppBarOverlay">
+    <ImageButton
+        android:id="@+id/prod_aboutme"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/about_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aboutsymb" />
 
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include layout="@layout/content_productivity" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/prod_hours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/time1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#9AFBBE25"
+        app:layout_constraintStart_toEndOf="@+id/prod_time_spent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button7"
+    <ImageView
+        android:id="@+id/prod_progress"
+        android:layout_width="290dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="260dp"
+        android:contentDescription="@string/progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/raster" />
+
+    <View
+        android:id="@+id/prod_rectangle1"
+        android:layout_width="178dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_time_spent" />
+
+    <View
+        android:id="@+id/prod_rectangle2"
+        android:layout_width="115dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle1" />
+
+    <View
+        android:id="@+id/prod_rectangle3"
+        android:layout_width="100dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle2" />
+
+    <TextView
+        android:id="@+id/prod_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About Me"
-        app:layout_anchor="@+id/toolbar"
-        app:layout_anchorGravity="center" />
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/prod_text1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/prod_rectangle1"
+        app:layout_constraintTop_toBottomOf="@+id/prod_time_spent" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:layout_anchor="@+id/appBarLayout2"
-        app:layout_anchorGravity="center"
-        app:popupTheme="@style/Theme.Schedule4U.PopupOverlay" />
+    <TextView
+        android:id="@+id/prod_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/prod_text2"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/prod_rectangle2"
+        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle1" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/prod_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/prod_text3"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/prod_rectangle3"
+        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle2" />
+
+    <TextView
+        android:id="@+id/prod_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:text="@string/_45_50_points"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_week"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text4" />
+
+    <ImageView
+        android:id="@+id/prod_oval1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="144dp"
+        android:contentDescription="@string/oval_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/oval" />
+
+    <ImageView
+        android:id="@+id/prod_oval2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="144dp"
+        android:contentDescription="@string/oval_grey1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
+        app:srcCompat="@drawable/ovel2" />
+
+    <ImageView
+        android:id="@+id/prod_oval3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="144dp"
+        android:contentDescription="@string/oval3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval2"
+        app:srcCompat="@drawable/oval3" />
+
+    <ImageView
+        android:id="@+id/prod_oval4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="76dp"
+        android:contentDescription="@string/oval4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/oval4" />
+
+    <TextView
+        android:id="@+id/prod_text6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/_8"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval1" />
+
+    <TextView
+        android:id="@+id/prod_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="193dp"
+        android:layout_marginLeft="193dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/_10"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="160dp"
+        android:text="@string/_14"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval3" />
+
+    <TextView
+        android:id="@+id/prod_text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="90dp"
+        android:text="@string/_18"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/prod_text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/mo"
+        android:textColor="#B3A3A3"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text6" />
+
+    <TextView
+        android:id="@+id/prod_text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="@string/tu"
+        android:textColor="#B3A3A3"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval2"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text7" />
+
+    <TextView
+        android:id="@+id/prod_text12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="We"
+        android:textColor="#B3A3A3"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval3"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text8" />
+
+    <TextView
+        android:id="@+id/prod_text13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="Th"
+        android:textColor="#B3A3A3"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval4"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

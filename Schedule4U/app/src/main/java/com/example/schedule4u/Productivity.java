@@ -1,5 +1,6 @@
 package com.example.schedule4u;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -33,8 +34,8 @@ public class Productivity extends AppCompatActivity {
 
         //for some reason I'm having trouble linking the button to the proper page.
         //when you link it to a page like the ToDos or something, it works fine. But not
-        //for the class that I just created 
-        Button productivityAboutMe = (Button) findViewById(R.id.button7);
+        //for the class that I just created
+        ImageButton productivityAboutMe = (ImageButton) findViewById(R.id.prod_aboutme);
         productivityAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), ProductivityAboutMe.class);
@@ -44,7 +45,7 @@ public class Productivity extends AppCompatActivity {
         });
 
         //Be careful! This is code for image button not ordinarily button//
-        ImageButton homebutton_6= (ImageButton) findViewById(R.id.homebutton6);
+        ImageButton homebutton_6= (ImageButton) findViewById(R.id.prod_home);
         homebutton_6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), MainActivity.class);
