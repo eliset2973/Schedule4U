@@ -59,12 +59,19 @@
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:translationY="64dp"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="center" />
+        app:layout_anchorGravity="center_horizontal|top" />
 
     <SearchView
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="84dp"
         android:translationY="?android:attr/windowTitleSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:translationY="420dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
