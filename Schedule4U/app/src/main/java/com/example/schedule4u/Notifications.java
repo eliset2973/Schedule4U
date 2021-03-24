@@ -16,8 +16,6 @@ import android.widget.TextView;
 
 public class Notifications extends AppCompatActivity {
 
-    private NotificationsObject sample_task;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
