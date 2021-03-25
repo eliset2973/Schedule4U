@@ -18,6 +18,10 @@
             android:label="@string/title_activity_calendar"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
+            android:name=".CreateTask"
+            android:label="@string/title_activity_createTask"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
             android:name=".Recommendations"
             android:label="@string/title_activity_recommendations"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />

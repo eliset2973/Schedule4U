@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="160dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="End Time"
+        app:layout_constraintBottom_toTopOf="@+id/startTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/extraDetails"
+        android:layout_width="357dp"
+        android:layout_height="60dp"
+        android:hint="Extra Details"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <EditText
+        android:id="@+id/startTime"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/endTime"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <EditText
+        android:id="@+id/completeDay"
+        android:layout_width="351dp"
+        android:layout_height="57dp"
+        android:hint="Day To Complete Task By"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTask"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <EditText
+        android:id="@+id/timeForTask"
+        android:layout_width="351dp"
+        android:layout_height="57dp"
+        android:hint="Time Allotted for Task"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addTask"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="328dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:text="Create a Task"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/addTask"
+        android:layout_width="351dp"
+        android:layout_height="57dp"
+        android:hint="Name of Task"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <RadioGroup
+        android:id="@+id/importanceLevel"
+        android:layout_width="354dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completeDay">
+
+        <RadioButton
+            android:id="@+id/urgent"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Urgent" />
+
+        <RadioButton
+            android:id="@+id/important"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="Important" />
+
+        <RadioButton
+            android:id="@+id/leisure"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="Leisure" />
+
+        <RadioButton
+            android:id="@+id/onlyIfTime"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:text="Only If Time" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/endTime"
+        android:layout_width="153dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="180dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/taskDays"
+        android:layout_width="119dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extraDetails"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/taskSplitInput"
+        android:layout_width="178dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="56dp"
+        android:text="Split Task Into # of Days"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/taskDays"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/createNewTaskSubmit"
+        android:layout_width="187dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="24dp"
+        android:text="Add Task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="160dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Start Time"
+        app:layout_constraintBottom_toTopOf="@+id/startTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
