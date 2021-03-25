@@ -21,23 +21,24 @@
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="229dp"
-        android:layout_height="47dp"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
         android:text="Recommendations"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="227dp"
-        android:layout_height="77dp"
+        android:layout_width="239dp"
+        android:layout_height="149dp"
         android:text="1. All events without scheduled time slots are included
 in the recommended events page."
-        android:textSize="6sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -47,11 +48,11 @@ in the recommended events page."
 
     <TextView
         android:id="@+id/textView15"
-        android:layout_width="227dp"
-        android:layout_height="89dp"
+        android:layout_width="237dp"
+        android:layout_height="235dp"
         android:text="2. Recommended events are selected based on their priority, time required for
 completion, due date, etc."
-        android:textSize="6sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

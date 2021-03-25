@@ -41,7 +41,7 @@
         android:text="1. The notifications page is meant to notify you about
 your upcoming events, tasks, meetings, and any deadlines you have scheduled through
 the application. Any notifications you wish to receive will populate on this page. "
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -56,7 +56,7 @@ the application. Any notifications you wish to receive will populate on this pag
         android:text="2. You may choose to delete any notifications by clicking on the icon to the
 right of each notification. Any deleted tasks and notifications can be viewed and recovered through
 the recycled tasks page that can be visited from the home page."
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"

@@ -37,7 +37,7 @@
         android:layout_height="111dp"
         android:text="1. All events that have been scheduled today will appear on this page.
 You can view your tasks and check them off when completed."
-        android:textSize="6sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@ You can view your tasks and check them off when completed."
         android:layout_height="135dp"
         android:text="2. These tasks can be deleted, edited, and tasks can be added
 at your discretion."
-        android:textSize="11sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
