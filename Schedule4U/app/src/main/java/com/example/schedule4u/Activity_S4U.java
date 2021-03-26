@@ -1,3 +1,4 @@
+import java.sql.Time;
 import java.util.Date;
 public class Activity_S4U {
     // used Create Task page for reference
@@ -5,8 +6,8 @@ public class Activity_S4U {
     public int time_alotted; // minutes
     public Date complete_task_by;
     public int importance;
-    public Date  start_time;
-    public Date end_time;
+    public Time start_time;
+    public Time end_time;
     public String details;
     public int splitTask;
 
@@ -16,8 +17,8 @@ public class Activity_S4U {
         this.time_alotted = 60;
         this.complete_task_by = new Date(System.currentTimeMillis()+1000*60*60*24*7);
         this.importance = 2;
-        this.start_time = new Date(System.currentTimeMillis()+1000*60*60*24*6);
-        this.end_time = new Date(System.currentTimeMillis()+1000*60*60*24*7);
+        this.start_time = new Time(System.currentTimeMillis()+1000*60*60*24*6);
+        this.end_time = new Time(System.currentTimeMillis()+1000*60*60*24*7);
         this.details = "Details placeholder";
         this.splitTask = 1;
     }
