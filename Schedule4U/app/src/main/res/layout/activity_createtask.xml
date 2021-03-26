@@ -60,19 +60,6 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <EditText
-        android:id="@+id/completeDay"
-        android:layout_width="351dp"
-        android:layout_height="49dp"
-        android:hint="Day To Complete Task By"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTask"
-        app:layout_constraintVertical_bias="0.089" />
-
-    <EditText
         android:id="@+id/timeForTask"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -117,11 +104,11 @@
         android:id="@+id/importanceLevel"
         android:layout_width="354dp"
         android:layout_height="116dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="236dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/completeDay">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/urgent"
@@ -206,5 +193,19 @@
         android:text="Start Time"
         app:layout_constraintBottom_toTopOf="@+id/startTime"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/completeDay"
+        android:layout_width="351dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="Date To Complete By"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/importanceLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeForTask"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,17 @@ public class Activity_S4U {
         this.splitTask = 1;
     }
 
+    public Activity_S4U(String placeholder, int time, Date completeBy, int importance, Time start, Time end, String extra, int split) {
+        this.name = "Name placeholder";
+        this.time_alotted = 60;
+        this.complete_task_by = new Date(System.currentTimeMillis()+1000*60*60*24*7);
+        this.importance = 2;
+        this.start_time = new Time(System.currentTimeMillis()+1000*60*60*24*6);
+        this.end_time = new Time(System.currentTimeMillis()+1000*60*60*24*7);
+        this.details = "Details placeholder";
+        this.splitTask = 1;
+    }
+
     /*public static void main(String[] args) {
         Activity_S4U test_activity = new Activity_S4U();
         System.out.println(test_activity.time_alotted);
