@@ -31,7 +31,7 @@ public class ToDos extends AppCompatActivity {
         //for some reason I'm having trouble linking the button to the proper page.
         //when you link it to a page like the ToDos or something, it works fine. But not
         //for the class that I just created
-        Button toDosAboutMe = (Button) findViewById(R.id.toDosAboutMe);
+        ImageButton toDosAboutMe = (ImageButton) findViewById(R.id.todos_aboutme2);
         toDosAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), ToDosAboutMe.class);
@@ -41,7 +41,7 @@ public class ToDos extends AppCompatActivity {
         });
 
         //create a task page is populated when this button is clicked
-        Button createTask = (Button) findViewById(R.id.createTaskButton);
+        Button createTask = (Button) findViewById(R.id.AddNewTask);
         createTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), CreateTask.class);

@@ -17,6 +17,14 @@ public class CreateTask extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createtask);
 
+        ImageButton homebutton_create= (ImageButton) findViewById(R.id.homebutton3);
+        homebutton_create.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
         Button submitNewTask = (Button) findViewById(R.id.createNewTaskSubmit);
         submitNewTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

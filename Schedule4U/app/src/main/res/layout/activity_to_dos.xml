@@ -21,15 +21,9 @@
 
 
 
-    ]]>
 
-    <Button
-        android:id="@+id/createTaskButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Create New Task"
-        app:layout_anchor="@+id/toolbar"
-        app:layout_anchorGravity="end|center" />
+
+    ]]>
 
     <ImageButton
         android:id="@+id/homebutton10"
@@ -57,14 +51,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
-
-    <Button
-        android:id="@+id/toDosAboutMe"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="About Me"
-        app:layout_anchor="@+id/appBarLayout5"
-        app:layout_anchorGravity="center" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

@@ -4,7 +4,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/umn_color">
+
+    <ImageButton
+        android:id="@+id/homebutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginRight="126dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homeimage" />
 
     <TextView
         android:id="@+id/textView48"
@@ -25,10 +39,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
-        app:layout_constraintVertical_bias="0.432" />
+        app:layout_constraintVertical_bias="0.34" />
 
     <EditText
         android:id="@+id/startTime"
@@ -40,39 +54,41 @@
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/endTime"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.123" />
 
     <EditText
         android:id="@+id/completeDay"
         android:layout_width="351dp"
-        android:layout_height="57dp"
+        android:layout_height="49dp"
         android:hint="Day To Complete Task By"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addTask"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <EditText
         android:id="@+id/timeForTask"
         android:layout_width="351dp"
-        android:layout_height="57dp"
+        android:layout_height="49dp"
         android:hint="Time Allotted for Task"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addTask"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView43"
-        android:layout_width="328dp"
-        android:layout_height="38dp"
+        android:layout_width="160dp"
+        android:layout_height="46dp"
         android:gravity="center"
         android:text="Create a Task"
         android:textSize="24sp"
@@ -86,7 +102,7 @@
     <EditText
         android:id="@+id/addTask"
         android:layout_width="351dp"
-        android:layout_height="57dp"
+        android:layout_height="49dp"
         android:hint="Name of Task"
         android:inputType="text"
         android:textSize="14sp"
@@ -136,9 +152,9 @@
         android:id="@+id/endTime"
         android:layout_width="153dp"
         android:layout_height="45dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="232dp"
         android:ems="10"
         android:inputType="time"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,34 +162,34 @@
 
     <EditText
         android:id="@+id/taskDays"
-        android:layout_width="119dp"
-        android:layout_height="40dp"
+        android:layout_width="102dp"
+        android:layout_height="27dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extraDetails"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintVertical_bias="0.244" />
 
     <TextView
         android:id="@+id/taskSplitInput"
-        android:layout_width="178dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="148dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="120dp"
         android:text="Split Task Into # of Days"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/taskDays"
-        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/createNewTaskSubmit"
         android:layout_width="187dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="40dp"
         android:text="Add Task"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
