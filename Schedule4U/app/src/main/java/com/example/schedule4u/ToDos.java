@@ -8,7 +8,9 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class ToDos extends AppCompatActivity {
 
@@ -18,6 +20,12 @@ public class ToDos extends AppCompatActivity {
         setContentView(R.layout.activity_to_dos);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // A TEST TO SEE IF TASK INFO CAN BE TRANSMITTED ACROSS DIFFERENT ACTIVITIES
+        TextView text = (TextView)findViewById(R.id.textView44);
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("event");
+        text.setText(str);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +60,7 @@ public class ToDos extends AppCompatActivity {
 
 //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_10= (ImageButton) findViewById(R.id.homebutton10);
+
         homebutton_10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), MainActivity.class);

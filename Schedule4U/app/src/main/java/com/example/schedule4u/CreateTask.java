@@ -46,6 +46,9 @@ public class CreateTask extends AppCompatActivity{
                 EditText taskDaysNum = (EditText)findViewById(R.id.taskDays); //this line grabs the form input
                 String daysNum = taskDaysNum.getText().toString(); //this line casts it to a string
                 Intent myIntent = new Intent(view.getContext(), ToDos.class);
+
+                // THIS IS A TEST TO SEE IF DATA IS SENT TO DIFFERENT ACTIVITIES
+                myIntent.putExtra("event", task);
                 startActivityForResult(myIntent, 0);
             }
 
