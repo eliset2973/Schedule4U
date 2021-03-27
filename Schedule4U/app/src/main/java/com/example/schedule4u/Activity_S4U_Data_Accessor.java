@@ -20,7 +20,7 @@ public class Activity_S4U_Data_Accessor {
 
     public Activity_S4U_Data_Accessor(Context context, boolean useSavedData) {
         usedSavedData = useSavedData;
-        S4UApplication S4U_App = new S4UApplication();
+        // S4UApplication S4U_App = new S4UApplication();
         //context = S4U_App.getApplicationContext();
         filename = "Activity_S4U_Data_Binary";
         if (usedSavedData) {
@@ -34,7 +34,7 @@ public class Activity_S4U_Data_Accessor {
 
     // false for fail, true for succede
     public boolean load(Context context) {
-        S4UApplication S4U_App = new S4UApplication();
+        // S4UApplication S4U_App = new S4UApplication();
         // context = S4U_App.getApplicationContext();
         Activity_S4U_Lists asl = null;
         try {
@@ -55,7 +55,7 @@ public class Activity_S4U_Data_Accessor {
     }
 
     public boolean save(Context context) {
-        S4UApplication S4U_App = new S4UApplication();
+        // S4UApplication S4U_App = new S4UApplication();
         // context = S4U_App.getApplicationContext();
         try (FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE)) {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
