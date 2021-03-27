@@ -46,18 +46,6 @@ public class create_event_edit extends AppCompatActivity{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 

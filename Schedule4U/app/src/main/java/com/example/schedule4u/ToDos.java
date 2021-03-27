@@ -90,12 +90,11 @@ public class ToDos extends AppCompatActivity {
         //for some reason I'm having trouble linking the button to the proper page.
         //when you link it to a page like the ToDos or something, it works fine. But not
         //for the class that I just created
-        //ImageButton toDosAboutMe = (ImageButton) findViewById(R.id.todos_aboutme2);
+        //ImageButton toDosAboutMe = (ImageButton) findViewById(R.id.todos_aboutme);
         ImageButton toDosAboutMe = (ImageButton) findViewById(R.id.todos_aboutme2);
         toDosAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), ToDosAboutMe.class);
-
+                Intent myIntent = new Intent(view.getContext(), create_event_edit.class);
                 startActivityForResult(myIntent, 0);
             }
 
@@ -110,9 +109,10 @@ public class ToDos extends AppCompatActivity {
             }
 
         });
-// the edit button is here
-        Button editTask = (Button) findViewById(R.id.edit2);
-        createTask.setOnClickListener(new View.OnClickListener() {
+
+        // the edit button is here
+        Button editTask = (Button) findViewById(R.id.Edit1);
+        editTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), create_event_edit.class);
                 startActivityForResult(myIntent, 0);
@@ -120,7 +120,7 @@ public class ToDos extends AppCompatActivity {
 
         });
 
-//Be careful! This is code for image button not ordinarily button//
+        //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_10= (ImageButton) findViewById(R.id.homebutton10);
 
         homebutton_10.setOnClickListener(new View.OnClickListener() {
