@@ -45,6 +45,25 @@ public class ToDos extends AppCompatActivity {
 
 
 ///////////////////////
+        TextView name_1 = (TextView)findViewById(R.id.titletobeedited);
+        TextView time_1 = (TextView)findViewById(R.id.timetobeedited);
+        TextView importance_1 = (TextView)findViewById(R.id.prioritytobechanged);
+        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
+
+        // create the get Intent object
+
+
+        // receive the value by getStringExtra() method
+        // and key must be same which is send by first activity
+        String Name_1 = intent.getStringExtra("taskNM");
+        String Time_1 = intent.getStringExtra("taskTM");
+        String Importance_1 = intent.getStringExtra("importanceLv");
+        String Location_1 = intent.getStringExtra("taskLc");
+        // display the string into textView
+        name_1.setText(Name_1);
+        time_1.setText(Time_1);
+        importance_1.setText(Importance_1);
+        location_1.setText(Location_1);
 
 
 
@@ -111,7 +130,7 @@ public class ToDos extends AppCompatActivity {
         });
 
         // the edit button is here
-        Button editTask = (Button) findViewById(R.id.Edit1);
+        Button editTask = (Button) findViewById(R.id.edit2);
         editTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), create_event_edit.class);

@@ -34,11 +34,12 @@
     <EditText
 
         android:id="@+id/moreDetails"
-        android:inputType="text"
-        android:imeOptions="actionDone"
         android:layout_width="357dp"
         android:layout_height="60dp"
-        android:hint="Extra Details"
+        android:hint="location: home"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:text="home"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,8 +55,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:ems="10"
+        android:hint="1:00 pm-2:00pm"
         android:imeOptions="actionDone"
         android:inputType="date|textUri|textShortMessage|textLongMessage|textAutoCorrect|number|time"
+        android:text="1:00 pm-2:00pm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/EndTime"
         app:layout_constraintHorizontal_bias="0.066"
@@ -64,11 +67,12 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <EditText
-        android:imeOptions="actionDone"
         android:id="@+id/TimeForTask"
         android:layout_width="351dp"
         android:layout_height="49dp"
-        android:hint="Time Allotted for Task (Minutes)"
+        android:hint="120 minute"
+        android:imeOptions="actionDone"
+        android:text="120 min"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,11 +97,12 @@
 
     <EditText
         android:id="@+id/AddTask"
-        android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
-        android:hint="Name of Task"
+        android:hint="Do problem set"
+        android:imeOptions="actionDone"
         android:inputType="text"
+        android:text="Do problem set"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,11 +161,13 @@
 
     <EditText
         android:id="@+id/TaskDays"
-        android:imeOptions="actionDone"
         android:layout_width="102dp"
         android:layout_height="27dp"
         android:ems="10"
+        android:hint="3"
+        android:imeOptions="actionDone"
         android:inputType="number"
+        android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
@@ -181,7 +188,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/CreateNewTaskSubmit"
+        android:id="@+id/Editeventsubmit"
         android:layout_width="187dp"
         android:layout_height="43dp"
         android:layout_marginBottom="40dp"
@@ -204,12 +211,13 @@
 
     <EditText
         android:id="@+id/CompleteDay"
-        android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:hint="Date To Complete By"
+        android:hint="03.21"
+        android:imeOptions="actionDone"
         android:inputType="date"
+        android:text="3.01"
         app:layout_constraintBottom_toTopOf="@+id/ImportanceLevel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
@@ -231,14 +239,15 @@
 
     <EditText
         android:id="@+id/Levelofimportance"
-        android:inputType="number"
-        android:imeOptions="actionDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="24dp"
-        android:hint="type 1,2,3,4"
+        android:hint="1"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:text="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moreDetails" />
 
