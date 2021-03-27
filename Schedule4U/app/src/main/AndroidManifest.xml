@@ -22,6 +22,10 @@
             android:label="@string/title_activity_createTask"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
+            android:name=".create_event_edit"
+            android:label="@string/title_activity_createTask"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
             android:name=".Recommendations"
             android:label="@string/title_activity_recommendations"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />

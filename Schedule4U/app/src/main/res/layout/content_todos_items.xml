@@ -79,6 +79,8 @@
         android:layout_marginTop="288dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
+        android:clickable="true"
+        android:linksClickable="true"
         android:text="Edit"
         app:backgroundTint="#FFCC33"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +122,7 @@
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <ImageButton
         android:id="@+id/todos_aboutme2"

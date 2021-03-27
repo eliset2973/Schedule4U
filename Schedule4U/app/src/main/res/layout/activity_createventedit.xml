@@ -8,7 +8,7 @@
     android:background="@drawable/umn_color">
 
     <ImageButton
-        android:id="@+id/homebutton3"
+        android:id="@+id/HOMEB3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -21,19 +21,19 @@
         app:srcCompat="@drawable/homeimage" />
 
     <TextView
-        android:id="@+id/textView48"
+        android:id="@+id/TextView48"
         android:layout_width="160dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
         android:text="End Time"
-        app:layout_constraintBottom_toTopOf="@+id/startTime"
+        app:layout_constraintBottom_toTopOf="@+id/startTIME"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
 
-        android:id="@+id/extraDetails"
+        android:id="@+id/moreDetails"
         android:inputType="text"
         android:imeOptions="actionDone"
         android:layout_width="357dp"
@@ -44,11 +44,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
+        app:layout_constraintTop_toBottomOf="@+id/ImportanceLevel"
         app:layout_constraintVertical_bias="0.34" />
 
     <EditText
-        android:id="@+id/startTime"
+        android:id="@+id/startTIME"
         android:layout_width="161dp"
         android:layout_height="43dp"
         android:layout_marginStart="28dp"
@@ -57,15 +57,15 @@
         android:imeOptions="actionDone"
         android:inputType="date|textUri|textShortMessage|textLongMessage|textAutoCorrect|number|time"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/endTime"
+        app:layout_constraintEnd_toStartOf="@+id/EndTime"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/importanceLevel"
+        app:layout_constraintTop_toBottomOf="@+id/ImportanceLevel"
         app:layout_constraintVertical_bias="0.123" />
 
     <EditText
         android:imeOptions="actionDone"
-        android:id="@+id/timeForTask"
+        android:id="@+id/TimeForTask"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:hint="Time Allotted for Task (Minutes)"
@@ -74,15 +74,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTask"
+        app:layout_constraintTop_toBottomOf="@+id/AddTask"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView43"
+        android:id="@+id/TextView43"
         android:layout_width="160dp"
         android:layout_height="46dp"
         android:gravity="center"
-        android:text="Create a Task"
+        android:text="Edit a Task"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +92,7 @@
         app:layout_constraintVertical_bias="0.046" />
 
     <EditText
-        android:id="@+id/addTask"
+        android:id="@+id/AddTask"
         android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -103,11 +103,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/TextView43"
         app:layout_constraintVertical_bias="0.011" />
 
     <RadioGroup
-        android:id="@+id/importanceLevel"
+        android:id="@+id/ImportanceLevel"
         android:layout_width="354dp"
         android:layout_height="116dp"
         android:layout_marginTop="236dp"
@@ -142,7 +142,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/endTime"
+        android:id="@+id/EndTime"
         android:imeOptions="actionDone"
         android:layout_width="153dp"
         android:layout_height="45dp"
@@ -155,7 +155,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/taskDays"
+        android:id="@+id/TaskDays"
         android:imeOptions="actionDone"
         android:layout_width="102dp"
         android:layout_height="27dp"
@@ -165,60 +165,60 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extraDetails"
+        app:layout_constraintTop_toBottomOf="@+id/moreDetails"
         app:layout_constraintVertical_bias="0.244" />
 
     <TextView
-        android:id="@+id/taskSplitInput"
+        android:id="@+id/TaskSplitInput"
         android:layout_width="148dp"
         android:layout_height="24dp"
         android:layout_marginBottom="120dp"
         android:text="Split Task Into # of Days"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/taskDays"
+        app:layout_constraintEnd_toStartOf="@+id/TaskDays"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/createNewTaskSubmit"
+        android:id="@+id/CreateNewTaskSubmit"
         android:layout_width="187dp"
         android:layout_height="43dp"
         android:layout_marginBottom="40dp"
-        android:text="Add Task"
+        android:text="Edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView46"
+        android:id="@+id/TextView46"
         android:layout_width="160dp"
         android:layout_height="24dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginBottom="8dp"
         android:text="Start Time"
-        app:layout_constraintBottom_toTopOf="@+id/startTime"
+        app:layout_constraintBottom_toTopOf="@+id/startTIME"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/completeDay"
+        android:id="@+id/CompleteDay"
         android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:ems="10"
         android:hint="Date To Complete By"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/importanceLevel"
+        app:layout_constraintBottom_toTopOf="@+id/ImportanceLevel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeForTask"
+        app:layout_constraintTop_toBottomOf="@+id/TimeForTask"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView57"
+        android:id="@+id/TextView57"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -227,10 +227,10 @@
         android:layout_marginTop="24dp"
         android:text="importance(1-4)"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extraDetails" />
+        app:layout_constraintTop_toBottomOf="@+id/moreDetails" />
 
     <EditText
-        android:id="@+id/levelofimportance"
+        android:id="@+id/Levelofimportance"
         android:inputType="number"
         android:imeOptions="actionDone"
         android:layout_width="wrap_content"
@@ -240,6 +240,6 @@
         android:layout_marginTop="24dp"
         android:hint="type 1,2,3,4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extraDetails" />
+        app:layout_constraintTop_toBottomOf="@+id/moreDetails" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
