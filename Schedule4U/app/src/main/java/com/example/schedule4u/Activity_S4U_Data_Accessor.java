@@ -15,16 +15,16 @@ public class Activity_S4U_Data_Accessor {
     // lists is an object that contains all of our S4U Activities
     public Activity_S4U_Lists lists;
     public boolean usedSavedData;
-    public Context context;
+    //public Context context;
     public String filename;
 
-    public Activity_S4U_Data_Accessor(boolean useSavedData) {
+    public Activity_S4U_Data_Accessor(Context context, boolean useSavedData) {
         usedSavedData = useSavedData;
         S4UApplication S4U_App = new S4UApplication();
-        context = S4U_App.getApplicationContext();
+        //context = S4U_App.getApplicationContext();
         filename = "Activity_S4U_Data_Binary";
         if (usedSavedData) {
-            usedSavedData = this.load();
+            usedSavedData = this.load(context);
         }
         // use example data
         if (!usedSavedData) {
@@ -33,14 +33,11 @@ public class Activity_S4U_Data_Accessor {
     }
 
     // false for fail, true for succede
-    public boolean load() {
+    public boolean load(Context context) {
         S4UApplication S4U_App = new S4UApplication();
-        context = S4U_App.getApplicationContext();
+        // context = S4U_App.getApplicationContext();
         Activity_S4U_Lists asl = null;
         try {
-            //File file = new File(Context.getFilesDir(), "Activity_S4U_Data_Binary");
-            // BufferedReader br = null;
-            // new InputStreamReader(context.openFileInput(filename));
             FileInputStream fis = context.openFileInput(filename);
             ObjectInputStream ois = new ObjectInputStream(fis);
             asl = (Activity_S4U_Lists) ois.readObject();
@@ -57,9 +54,9 @@ public class Activity_S4U_Data_Accessor {
         return true;
     }
 
-    public boolean save() {
+    public boolean save(Context context) {
         S4UApplication S4U_App = new S4UApplication();
-        context = S4U_App.getApplicationContext();
+        // context = S4U_App.getApplicationContext();
         try (FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE)) {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(lists);

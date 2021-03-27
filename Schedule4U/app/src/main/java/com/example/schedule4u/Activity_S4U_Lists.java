@@ -13,7 +13,7 @@ public class Activity_S4U_Lists implements java.io.Serializable {
         active = new LinkedList<Activity_S4U>();
         deleted = new LinkedList<Activity_S4U>();
         if (useSampleActivitiesInsteadOfEmptyList) {
-            for (Integer i = new Integer(0); i < 5; i++) {
+            for (Integer i = new Integer(1); i < 6; i++) {
                 Activity_S4U temp = new Activity_S4U();
                 temp.name = temp.name + " " + i.toString();
                 active.add(temp);
