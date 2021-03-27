@@ -20,12 +20,64 @@ public class ToDos extends AppCompatActivity {
         setContentView(R.layout.activity_to_dos);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+///////////////////////////////////////
 
-        // A TEST TO SEE IF TASK INFO CAN BE TRANSMITTED ACROSS DIFFERENT ACTIVITIES
-        TextView text = (TextView)findViewById(R.id.textView44);
+
         Intent intent = getIntent();
-        String str = intent.getStringExtra("event");
-        text.setText(str);
+        TextView name = (TextView)findViewById(R.id.eventtitletobeadded);
+        TextView time = (TextView)findViewById(R.id.timetobeadded);
+        TextView importance = (TextView)findViewById(R.id.prioritytobeadded);
+        TextView location = (TextView)findViewById(R.id.locationtobeadded);
+
+        // create the get Intent object
+
+
+        // receive the value by getStringExtra() method
+        // and key must be same which is send by first activity
+        String Name = intent.getStringExtra("taskname");
+        String Time = intent.getStringExtra("tasktime");
+        String Importance = intent.getStringExtra("importancelevel");
+        String Location = intent.getStringExtra("tasklocation");
+        // display the string into textView
+        name.setText(Name);
+        time.setText(Time);
+        importance.setText(Importance);
+        location.setText(Location);
+
+
+///////////////////////
+
+
+
+//        TextView name_ = (TextView)findViewById(R.id.titletobeedited);
+//        TextView time_ = (TextView)findViewById(R.id.timetobeedited);
+//        TextView importance_ = (TextView)findViewById(R.id.prioritytobechanged);
+//        TextView location_ = (TextView)findViewById(R.id.locationtobeedited);
+//
+//        // create the get Intent object
+//
+//
+//        // receive the value by getStringExtra() method
+//        // and key must be same which is send by first activity
+//        String Name_ = intent.getStringExtra("taskname_");
+//        String Time_ = intent.getStringExtra("tasktime_");
+//        String Importance_ = intent.getStringExtra("importancelevel_");
+//        String Location_ = intent.getStringExtra("tasklocation_");
+//        // display the string into textView
+//        name_.setText(Name_);
+//        time_.setText(Time_);
+//        importance_.setText(Importance_);
+//        location_.setText(Location_);
+
+
+
+
+        ///////////////////////////
+        // A TEST TO SEE IF TASK INFO CAN BE TRANSMITTED ACROSS DIFFERENT ACTIVITIES
+//        TextView text = (TextView)findViewById(R.id.textView44);
+//        Intent intent = getIntent();
+//        String str = intent.getStringExtra("event");
+//        text.setText(str);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +101,7 @@ public class ToDos extends AppCompatActivity {
         });
 
         //create a task page is populated when this button is clicked
-        Button createTask = (Button) findViewById(R.id.AddNewTask);
+        Button createTask = (Button) findViewById(R.id.addNewTask);
         createTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), CreateTask.class);
@@ -57,6 +109,8 @@ public class ToDos extends AppCompatActivity {
             }
 
         });
+
+
 
 //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_10= (ImageButton) findViewById(R.id.homebutton10);

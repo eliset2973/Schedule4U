@@ -32,7 +32,10 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+
         android:id="@+id/extraDetails"
+        android:inputType="text"
+        android:imeOptions="actionDone"
         android:layout_width="357dp"
         android:layout_height="60dp"
         android:hint="Extra Details"
@@ -51,7 +54,8 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:ems="10"
-        android:inputType="time"
+        android:imeOptions="actionDone"
+        android:inputType="date|textUri|textShortMessage|textLongMessage|textAutoCorrect|number|time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/endTime"
         app:layout_constraintHorizontal_bias="0.066"
@@ -60,6 +64,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <EditText
+        android:imeOptions="actionDone"
         android:id="@+id/timeForTask"
         android:layout_width="351dp"
         android:layout_height="49dp"
@@ -88,6 +93,7 @@
 
     <EditText
         android:id="@+id/addTask"
+        android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:hint="Name of Task"
@@ -117,7 +123,7 @@
             android:text="Urgent" />
 
         <RadioButton
-            android:id="@+id/important"
+            android:id="@+id/Important"
             android:layout_width="match_parent"
             android:layout_height="28dp"
             android:text="Important" />
@@ -137,6 +143,7 @@
 
     <EditText
         android:id="@+id/endTime"
+        android:imeOptions="actionDone"
         android:layout_width="153dp"
         android:layout_height="45dp"
         android:layout_marginEnd="32dp"
@@ -149,6 +156,7 @@
 
     <EditText
         android:id="@+id/taskDays"
+        android:imeOptions="actionDone"
         android:layout_width="102dp"
         android:layout_height="27dp"
         android:ems="10"
@@ -196,6 +204,7 @@
 
     <EditText
         android:id="@+id/completeDay"
+        android:imeOptions="actionDone"
         android:layout_width="351dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -207,5 +216,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timeForTask"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView57"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="24dp"
+        android:text="importance(1-4)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extraDetails" />
+
+    <EditText
+        android:id="@+id/levelofimportance"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="24dp"
+        android:hint="type 1,2,3,4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extraDetails" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
