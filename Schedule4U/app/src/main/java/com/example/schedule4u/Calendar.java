@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.util.List;
+
 public class Calendar extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,17 @@ public class Calendar extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // This block tests functionality of saving data
+        /* Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
+        List<Activity_S4U> printList = accessor.lists.active;
+        for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);
+        /*printList.add(new Activity_S4U());
+        printList.get(5).name = printList.get(5).name + " 6 (test adding)";
+        accessor.save(getApplicationContext());
+        accessor.load(getApplicationContext());
+        printList = accessor.lists.active;
+        for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);*/
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
