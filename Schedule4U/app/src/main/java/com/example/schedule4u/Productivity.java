@@ -2,13 +2,17 @@ package com.example.schedule4u;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import android.util.DisplayMetrics;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import android.widget.ImageView;
 
 import android.view.View;
 import android.widget.Button;
@@ -23,19 +27,7 @@ public class Productivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
-        //for some reason I'm having trouble linking the button to the proper page.
-        //when you link it to a page like the ToDos or something, it works fine. But not
-        //for the class that I just created
-        ImageButton productivityAboutMe = (ImageButton) findViewById(R.id.prod_aboutme);
+        ImageButton productivityAboutMe = findViewById(R.id.prod_aboutme);
         productivityAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), ProductivityAboutMe.class);
@@ -44,14 +36,25 @@ public class Productivity extends AppCompatActivity {
 
         });
 
-        //Be careful! This is code for image button not ordinarily button//
-        ImageButton homebutton_6= (ImageButton) findViewById(R.id.prod_home);
+
+        ImageButton homebutton_6= findViewById(R.id.prod_home);
         homebutton_6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), MainActivity.class);
                 startActivityForResult(myIntent, 0);
             }
         });
-        //Be careful! This is code for image button not ordinarily button//
+
+        float percentageFinished = (float) 0.5;
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        int screenHeight = displaymetrics.heightPixels;
+        int screenWidth = displaymetrics.widthPixels;
+        ImageView myImageView = findViewById(R.id.bar);
+        int imgHeight = (int) (screenHeight * 0.08);
+        int imgWidth =  (int) (screenWidth * 0.4 * percentageFinished);
+        myImageView.getLayoutParams().height = imgHeight;
+        myImageView.getLayoutParams().width = imgWidth;
+
     }
 }

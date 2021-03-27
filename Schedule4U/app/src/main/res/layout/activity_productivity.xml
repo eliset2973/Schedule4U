@@ -74,26 +74,15 @@
 
     <ImageView
         android:id="@+id/prod_progress"
-        android:layout_width="290dp"
-        android:layout_height="261dp"
-        android:layout_marginTop="260dp"
+        android:layout_width="264dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="256dp"
         android:contentDescription="@string/progress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/raster" />
-
-    <View
-        android:id="@+id/prod_rectangle1"
-        android:layout_width="178dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="19dp"
-        android:background="@drawable/rectangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prod_time_spent" />
 
     <View
         android:id="@+id/prod_rectangle2"
@@ -101,10 +90,10 @@
         android:layout_height="20dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:background="@drawable/rectangle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle1" />
+        app:layout_constraintTop_toBottomOf="@+id/bar" />
 
     <View
         android:id="@+id/prod_rectangle3"
@@ -121,43 +110,43 @@
         android:id="@+id/prod_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
         android:text="@string/prod_text1"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/prod_rectangle1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prod_time_spent" />
 
     <TextView
         android:id="@+id/prod_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:text="@string/prod_text2"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/prod_rectangle2"
-        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text1" />
 
     <TextView
         android:id="@+id/prod_text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="@string/prod_text3"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/prod_rectangle3"
-        app:layout_constraintTop_toBottomOf="@+id/prod_rectangle2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text2" />
 
     <TextView
         android:id="@+id/prod_text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="348dp"
         android:text="@string/_45_50_points"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -170,6 +159,7 @@
         android:id="@+id/prod_text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/this_week"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -178,52 +168,16 @@
         app:layout_constraintTop_toBottomOf="@+id/prod_text4" />
 
     <ImageView
-        android:id="@+id/prod_oval1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="144dp"
-        android:contentDescription="@string/oval_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/oval" />
-
-    <ImageView
-        android:id="@+id/prod_oval2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginBottom="144dp"
-        android:contentDescription="@string/oval_grey1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
-        app:srcCompat="@drawable/ovel2" />
-
-    <ImageView
         android:id="@+id/prod_oval3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginBottom="144dp"
+        android:layout_marginBottom="112dp"
         android:contentDescription="@string/oval3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/prod_oval2"
         app:srcCompat="@drawable/oval3" />
-
-    <ImageView
-        android:id="@+id/prod_oval4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="76dp"
-        android:contentDescription="@string/oval4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/oval4" />
 
     <TextView
         android:id="@+id/prod_text6"
@@ -231,7 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="128dp"
         android:text="@string/_8"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -239,65 +193,28 @@
         app:layout_constraintStart_toEndOf="@+id/prod_oval1" />
 
     <TextView
-        android:id="@+id/prod_text7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="193dp"
-        android:layout_marginLeft="193dp"
-        android:layout_marginBottom="160dp"
-        android:text="@string/_10"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/prod_text8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginBottom="160dp"
-        android:text="@string/_14"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/prod_oval3" />
-
-    <TextView
-        android:id="@+id/prod_text9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginBottom="90dp"
-        android:text="@string/_18"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/prod_text10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:text="@string/mo"
-        android:textColor="#B3A3A3"
-        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
-        app:layout_constraintTop_toBottomOf="@+id/prod_text6" />
-
-    <TextView
         android:id="@+id/prod_text11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
         android:text="@string/tu"
         android:textColor="#B3A3A3"
         app:layout_constraintStart_toEndOf="@+id/prod_oval2"
         app:layout_constraintTop_toBottomOf="@+id/prod_text7" />
+
+    <ImageView
+        android:id="@+id/prod_oval1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="112dp"
+        android:contentDescription="@string/oval_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/oval" />
 
     <TextView
         android:id="@+id/prod_text12"
@@ -305,10 +222,73 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:text="We"
+        android:layout_marginTop="4dp"
+        android:text="@string/we"
         android:textColor="#B3A3A3"
         app:layout_constraintStart_toEndOf="@+id/prod_oval3"
         app:layout_constraintTop_toBottomOf="@+id/prod_text8" />
+
+    <TextView
+        android:id="@+id/prod_text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/mo"
+        android:textColor="#B3A3A3"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
+        app:layout_constraintTop_toBottomOf="@+id/prod_text6" />
+
+    <TextView
+        android:id="@+id/prod_text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/_10"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/prod_oval2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="112dp"
+        android:contentDescription="@string/oval_grey1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval1"
+        app:srcCompat="@drawable/ovel2" />
+
+    <TextView
+        android:id="@+id/prod_text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/_14"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/prod_oval3" />
+
+    <ImageView
+        android:id="@+id/prod_oval4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="60dp"
+        android:contentDescription="@string/oval4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/oval4" />
 
     <TextView
         android:id="@+id/prod_text13"
@@ -316,10 +296,36 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:text="Th"
+        android:layout_marginTop="8dp"
+        android:text="@string/th"
         android:textColor="#B3A3A3"
         app:layout_constraintStart_toEndOf="@+id/prod_oval4"
         app:layout_constraintTop_toBottomOf="@+id/prod_text9" />
+
+    <TextView
+        android:id="@+id/prod_text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="72dp"
+        android:text="@string/_18"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/bar"
+        android:layout_width="184dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prod_time_spent"
+        app:srcCompat="@drawable/prod_yellow_bar"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
