@@ -28,7 +28,7 @@ public class ToDos extends AppCompatActivity {
         TextView name = (TextView)findViewById(R.id.eventtitletobeadded);
         TextView time = (TextView)findViewById(R.id.timetobeadded);
         TextView importance = (TextView)findViewById(R.id.prioritytobeadded);
-        TextView location = (TextView)findViewById(R.id.locationtobeadded);
+//        TextView location = (TextView)findViewById(R.id.locationtobeadded);
 
         // create the get Intent object
 
@@ -43,14 +43,14 @@ public class ToDos extends AppCompatActivity {
         name.setText(Name);
         time.setText(Time);
         importance.setText(Importance);
-        location.setText(Location);
+//        location.setText(Location);
 
 
 ///////////////////////
         TextView name_1 = (TextView)findViewById(R.id.titletobeedited);
         TextView time_1 = (TextView)findViewById(R.id.timetobeedited);
         TextView importance_1 = (TextView)findViewById(R.id.prioritytobechanged);
-        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
+//        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
 
         // create the get Intent object
 
@@ -65,7 +65,7 @@ public class ToDos extends AppCompatActivity {
         name_1.setText(Name_1);
         time_1.setText(Time_1);
         importance_1.setText(Importance_1);
-        location_1.setText(Location_1);
+//        location_1.setText(Location_1);
 
 
 

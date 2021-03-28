@@ -43,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About Me"
+        app:backgroundTint="#FFCC33"
         app:layout_anchor="@+id/toolbar"
         app:layout_anchorGravity="center" />
 
@@ -50,7 +51,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#FFCC33"
         app:layout_anchor="@+id/appBarLayout3"
         app:layout_anchorGravity="center"
         app:popupTheme="@style/Theme.Schedule4U.PopupOverlay" />
@@ -58,8 +59,12 @@
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="310dp"
-        android:layout_height="436dp"
+        android:layout_height="393dp"
+        android:focusedMonthDateColor="#FFFFFF"
+        android:selectedWeekBackgroundColor="#FFFFFF"
         android:translationY="32dp"
+        android:weekNumberColor="#FFFFFF"
+        android:weekSeparatorLineColor="#FFFBFB"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center_horizontal|top" />
 
