@@ -1,6 +1,7 @@
 package com.example.schedule4u;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -34,6 +36,26 @@ public class Calendar extends AppCompatActivity {
         accessor.load(getApplicationContext());
         printList = accessor.lists.active;
         for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);*/
+
+        // change to content layout
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
+        List<Activity_S4U> displayList = accessor.lists.active;
+        //setContentView(R.layout.content_calendar);
+
+        TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+        textViewCalendarActivityName1.setText(displayList.get(0).name);
+        System.out.println(displayList.get(0).name);
+
+        try {
+            ((TextView) findViewById(R.id.textViewCalendarActivityName2)).setText(displayList.get(1).name);
+            ((TextView) findViewById(R.id.textViewCalendarActivityName3)).setText(displayList.get(2).name);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(((TextView) findViewById(R.id.textViewCalendarActivityName2)).getText());
+
+        //change back to activity layout
+        //setContentView(R.layout.activity_calendar);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {

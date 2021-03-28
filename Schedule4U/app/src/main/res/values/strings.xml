@@ -41,4 +41,5 @@
     <string name="tu">Tu</string>
     <string name="we">We</string>
     <string name="th">Th</string>
+    <string name="calendar_activity_name1">textView1</string>
 </resources>
