@@ -26,6 +26,8 @@
     <string name="prod_text1">Finished Tasks: 5hr</string>
     <string name="prod_text2">Tasks Still in Progress: 1hr</string>
     <string name="prod_text3">Tasks for Leisure: 2hr 18min</string>
+    <string name="Schedule4UAboutMe">All About Schedule4U</string>
+    <string name="about_me_pages">About Me</string>
     <string name="progress">progress</string>
     <string name="_45_50_points">45/50 points</string>
     <string name="this_week">this week</string>

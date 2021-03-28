@@ -39,27 +39,31 @@
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".ToDos"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".ToDosAboutMe"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".RecommendationsAboutMe"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".ProductivityAboutMe"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".NotificationsAboutMe"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity
             android:name=".CalendarAboutMe"
-            android:label="@string/title_activity_to_dos"
+            android:label="@string/about_me_pages"
+            android:theme="@style/Theme.Schedule4U.NoActionBar" />
+        <activity
+            android:name=".ScheduleAboutMe"
+            android:label="@string/Schedule4UAboutMe"
             android:theme="@style/Theme.Schedule4U.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
