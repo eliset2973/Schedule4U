@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class ToDos extends AppCompatActivity {
 
     @Override
@@ -149,5 +151,67 @@ public class ToDos extends AppCompatActivity {
             }
         });
         //Be careful! This is code for image button not ordinarily button//
+
+        // Starting code for transfering data across activities and displaying it =-----------------
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(),true);
+        List<Activity_S4U> displayList = accessor.lists.active;
+
+        // will display first 3 valeus of displayList
+        int displayCount = 0;
+        if (displayList.size()>displayCount) {
+            TextView textView44 = (TextView) findViewById(R.id.textView44);
+            textView44.setText(displayList.get(displayCount).name);
+
+            //get and display time
+            String startString = displayList.get(displayCount).start_time.toString();
+            String endString = displayList.get(displayCount).end_time.toString();
+            // last 3 characters are seconds so dont display
+            String timeString = "Time: " + startString.substring(0, startString.length()-3)
+                    + " - " + endString.substring(0,endString.length()-3);
+            TextView textView45 = (TextView) findViewById(R.id.textView45);
+            textView45.setText(timeString);
+
+            // set priority
+            TextView textView47 = (TextView) findViewById(R.id.textView47);
+            textView47.setText("Priority: "+displayList.get(displayCount).importance);
+
+        }
+        if (displayList.size()>1) {
+            displayCount = 1;
+            TextView titletobeedited = (TextView) findViewById(R.id.titletobeedited);
+            titletobeedited.setText(displayList.get(displayCount).name);
+
+            //get and display time
+            String startString = displayList.get(displayCount).start_time.toString();
+            String endString = displayList.get(displayCount).end_time.toString();
+            // last 3 characters are seconds so dont display
+            String timeString = startString.substring(0, startString.length()-3)
+                    + " - " + endString.substring(0,endString.length()-3);
+            TextView timetobeedited = (TextView) findViewById(R.id.timetobeedited);
+            timetobeedited.setText(timeString);
+
+            // set priority
+            TextView prioritytobechanged = (TextView) findViewById(R.id.prioritytobechanged);
+            prioritytobechanged.setText(""+displayList.get(displayCount).importance);
+        }
+        if (displayList.size()>2) {
+            displayCount = 2;
+            TextView eventtitletobeadded = (TextView) findViewById(R.id.eventtitletobeadded);
+            eventtitletobeadded.setText(displayList.get(displayCount).name);
+
+            //get and display time
+            String startString = displayList.get(displayCount).start_time.toString();
+            String endString = displayList.get(displayCount).end_time.toString();
+            // last 3 characters are seconds so dont display
+            String timeString = startString.substring(0, startString.length()-3)
+                    + " - " + endString.substring(0,endString.length()-3);
+            TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
+            timetobeadded.setText(timeString);
+
+            // set priority
+            TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
+            prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+        }
     }
 }

@@ -40,8 +40,6 @@ public class Calendar extends AppCompatActivity {
         // change to content layout
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
         List<Activity_S4U> displayList = accessor.lists.active;
-        //setContentView(R.layout.content_calendar);
-
         TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
         textViewCalendarActivityName1.setText(displayList.get(0).name);
         System.out.println(displayList.get(0).name);
