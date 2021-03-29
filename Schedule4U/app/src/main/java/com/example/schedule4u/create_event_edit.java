@@ -122,8 +122,8 @@ public class create_event_edit extends AppCompatActivity{
         super.onResume();
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
                 getApplicationContext(),true);
-        Activity_S4U currentTask = accessor.lists.active.get(accessor.edit_task_index);
-        currentTask = accessor.lists.active.get(1); // hacky fix because passing through edit_task_index didnt work for some reason
+        Activity_S4U currentTask = accessor.lists.active.get(accessor.lists.edit_task_index);
+        //currentTask = accessor.lists.active.get(1); // hacky fix because passing through edit_task_index didnt work for some reason Note: fixed this
         // System.out.println("Edit task index is " + accessor.edit_task_index + " and currentTask.name is" + currentTask.name + " in OnResume() create_event_edit.java"); // for debugging above issue
 
         TextView AddTask = (TextView) findViewById(R.id.AddTask);

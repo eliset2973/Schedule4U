@@ -142,7 +142,7 @@ public class ToDos extends AppCompatActivity {
         editTask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(), true);
-                accessor.edit_task_index = 1; // since this is 2nd editTask we want 2nd task
+                accessor.lists.edit_task_index = 1; // since this is 2nd editTask we want 2nd task
                 accessor.save(getApplicationContext());
                 Intent myIntent = new Intent(view.getContext(), create_event_edit.class);
                 startActivityForResult(myIntent, 0);
