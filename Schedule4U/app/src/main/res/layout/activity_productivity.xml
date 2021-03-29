@@ -319,12 +319,11 @@
         android:id="@+id/bar"
         android:layout_width="184dp"
         android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prod_time_spent"
-        app:srcCompat="@drawable/prod_yellow_bar"
-        />
+        app:srcCompat="@drawable/prod_yellow_bar" />
 
 
 
