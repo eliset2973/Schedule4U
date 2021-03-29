@@ -128,6 +128,15 @@ public class ToDos extends AppCompatActivity {
 
         });
 
+        Button deletedItemsPage = (Button) findViewById(R.id.deletedItems);
+        deletedItemsPage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), DeletedItems.class);
+                startActivityForResult(myIntent, 0);
+            }
+
+        });
+
         // the edit button is here
         Button editTask = (Button) findViewById(R.id.edit2);
         editTask.setOnClickListener(new View.OnClickListener() {
@@ -160,8 +169,13 @@ public class ToDos extends AppCompatActivity {
                         getApplicationContext(),true);
                 List<Activity_S4U> displayList = accessor.lists.active;
                 if (displayList.size()>2) {
+                    Intent myIntent = new Intent(view.getContext(), DeletedItems.class);
+                    myIntent.putExtra("deletedItem", displayList.get(2).name);
+                    System.out.print("printing intent");
+                    System.out.print(displayList.get(2).name);
                     displayList.remove(2);
                     accessor.save(getApplicationContext());
+                    startActivityForResult(myIntent, 0);
                 }
                 displayDataFromSave();
             }
