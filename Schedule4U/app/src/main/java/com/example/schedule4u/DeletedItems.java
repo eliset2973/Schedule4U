@@ -30,7 +30,10 @@ public class DeletedItems extends AppCompatActivity {
 
         if (displayList.size()>0) {
             TextView textView56 = (TextView) findViewById(R.id.textView56);
+            TextView textView23 = (TextView) findViewById(R.id.textView23);
             textView56.setText(displayList.get(displayList.size()-1).name);
+            textView23.setText(displayList.get(displayList.size()-1).details);
+
         }
 
 //        Intent intent = getIntent();
@@ -49,17 +52,6 @@ public class DeletedItems extends AppCompatActivity {
 //            }
 //        });
 
-        //for some reason I'm having trouble linking the button to the proper page.
-        //when you link it to a page like the ToDos or something, it works fine. But not
-        //for the class that I just created
-        Button homeFromDelete = (Button) findViewById(R.id.HomeButton);
-        homeFromDelete.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivityForResult(myIntent, 0);
-            }
-
-        });
 
         //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_2= (ImageButton) findViewById(R.id.homebutton2);
