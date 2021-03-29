@@ -215,24 +215,28 @@ public class ToDos extends AppCompatActivity {
             eventtitletobeadded.setText(displayList.get(displayCount).name);
 
             //get and display time
-            String startString = displayList.get(displayCount).start_time.toString();
-            String endString = displayList.get(displayCount).end_time.toString();
+            //String startString = displayList.get(displayCount).start_time.toString();
+            //String endString = displayList.get(displayCount).end_time.toString();
+            String startString = displayList.get(displayCount).start_time_string;
+            String endString = displayList.get(displayCount).end_time_string;
             // last 3 characters are seconds so dont display
-            String timeString = startString.substring(0, startString.length()-3)
-                    + " - " + endString.substring(0,endString.length()-3);
+            //String timeString = startString.substring(0, startString.length()-3)
+            //        + " - " + endString.substring(0,endString.length()-3);
+            String timeString = startString + " - " + endString;
             TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
             timetobeadded.setText(timeString);
 
             // set priority
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
-            prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+            //prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+            prioritytobeadded.setText(""+displayList.get(displayCount).importance_string);
         } else {
             TextView eventtitletobeadded = (TextView) findViewById(R.id.eventtitletobeadded);
-            eventtitletobeadded.setText("");
+            eventtitletobeadded.setText(" ");
             TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
-            timetobeadded.setText("");
+            timetobeadded.setText(" ");
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
-            prioritytobeadded.setText("");
+            prioritytobeadded.setText(" ");
 
         }
     }

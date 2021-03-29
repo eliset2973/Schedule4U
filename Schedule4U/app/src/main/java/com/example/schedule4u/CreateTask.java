@@ -62,6 +62,9 @@ public class CreateTask extends AppCompatActivity{
                     //CreatedActivity.importance = Integer.parseInt(importancelevel); These four lines lines cause error
                     //CreatedActivity.start_time = Time.valueOf(startTime.getText().toString());
                     //CreatedActivity.end_time = Time.valueOf(endTime.getText().toString());
+                    CreatedActivity.start_time_string = startTime.getText().toString();
+                    CreatedActivity.end_time_string = endTime.getText().toString();
+                    CreatedActivity.importance_string = importancelevel;
 
                     // add created activity to data store and save
                     //accessor.lists.active.add(CreatedActivity); added above
