@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.List;
@@ -180,6 +181,52 @@ public class ToDos extends AppCompatActivity {
                 displayDataFromSave();
             }
         });
+        RadioButton checkTask1 = (RadioButton) findViewById(R.id.checkTask1);
+        checkTask1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                        getApplicationContext(),true);
+                List<Activity_S4U> displayList = accessor.lists.active;
+                if (displayList.size()>0) {
+                    if(checkTask1.isChecked() && displayList.get(0).completed) {
+                        checkTask1.setChecked(false); } // remove check on 2nd click
+                    displayList.get(0).completed = checkTask1.isChecked();
+                    accessor.save(getApplicationContext());
+                }
+                displayDataFromSave();
+            }
+        });
+        RadioButton checkTask2 = (RadioButton) findViewById(R.id.checkTask2);
+        checkTask2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                        getApplicationContext(),true);
+                List<Activity_S4U> displayList = accessor.lists.active;
+                if (displayList.size()>1) {
+                    if(checkTask2.isChecked() && displayList.get(1).completed) {
+                        checkTask2.setChecked(false); } // remove check on 2nd click
+                    displayList.get(1).completed = checkTask2.isChecked();
+                    accessor.save(getApplicationContext());
+                }
+                displayDataFromSave();
+            }
+        });
+        RadioButton checkTask3 = (RadioButton) findViewById(R.id.checkTask3);
+        checkTask3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                        getApplicationContext(),true);
+                List<Activity_S4U> displayList = accessor.lists.active;
+                if (displayList.size()>2) {
+                    if(checkTask3.isChecked() && displayList.get(2).completed) {
+                        checkTask3.setChecked(false); } // remove check on 2nd click
+                    displayList.get(2).completed = checkTask3.isChecked();
+                    // System.out.println("displayList.get(2).completed is "+displayList.get(2).completed+"in ToDos.java::checkTask3 onClick");
+                    accessor.save(getApplicationContext());
+                }
+                displayDataFromSave();
+            }
+        });
     }
 
     protected void displayDataFromSave() {
@@ -207,6 +254,9 @@ public class ToDos extends AppCompatActivity {
             TextView textView47 = (TextView) findViewById(R.id.textView47);
             textView47.setText("Priority: "+displayList.get(displayCount).importance);
 
+            RadioButton checkTask1 = (RadioButton) findViewById(R.id.checkTask1);
+            checkTask1.setChecked(displayList.get(displayCount).completed);
+
         }
         if (displayList.size()>1) {
             displayCount = 1;
@@ -226,6 +276,9 @@ public class ToDos extends AppCompatActivity {
             // set priority
             TextView prioritytobechanged = (TextView) findViewById(R.id.prioritytobechanged);
             prioritytobechanged.setText(""+displayList.get(displayCount).importance_string);
+
+            RadioButton checkTask2 = (RadioButton) findViewById(R.id.checkTask2);
+            checkTask2.setChecked(displayList.get(displayCount).completed);
         }
         if (displayList.size()>2) {
             displayCount = 2;
@@ -248,6 +301,9 @@ public class ToDos extends AppCompatActivity {
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
             //prioritytobeadded.setText(""+displayList.get(displayCount).importance);
             prioritytobeadded.setText(""+displayList.get(displayCount).importance_string);
+
+            RadioButton checkTask3 = (RadioButton) findViewById(R.id.checkTask3);
+            checkTask3.setChecked(displayList.get(displayCount).completed);
         } else {
             TextView eventtitletobeadded = (TextView) findViewById(R.id.eventtitletobeadded);
             eventtitletobeadded.setText(" ");
@@ -255,6 +311,8 @@ public class ToDos extends AppCompatActivity {
             timetobeadded.setText(" ");
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
             prioritytobeadded.setText(" ");
+            RadioButton checkTask3 = (RadioButton) findViewById(R.id.checkTask3);
+            checkTask3.setChecked(false);
 
         }
     }
