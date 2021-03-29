@@ -200,17 +200,18 @@ public class ToDos extends AppCompatActivity {
             titletobeedited.setText(displayList.get(displayCount).name);
 
             //get and display time
-            String startString = displayList.get(displayCount).start_time.toString();
-            String endString = displayList.get(displayCount).end_time.toString();
+            String startString = displayList.get(displayCount).start_time_string;
+            String endString = displayList.get(displayCount).end_time_string;
             // last 3 characters are seconds so dont display
-            String timeString = startString.substring(0, startString.length()-3)
-                    + " - " + endString.substring(0,endString.length()-3);
+            //String timeString = startString.substring(0, startString.length()-3)
+             //       + " - " + endString.substring(0,endString.length()-3);
+            String timeString = startString + " - " + endString;
             TextView timetobeedited = (TextView) findViewById(R.id.timetobeedited);
             timetobeedited.setText(timeString);
 
             // set priority
             TextView prioritytobechanged = (TextView) findViewById(R.id.prioritytobechanged);
-            prioritytobechanged.setText(""+displayList.get(displayCount).importance);
+            prioritytobechanged.setText(""+displayList.get(displayCount).importance_string);
         }
         if (displayList.size()>2) {
             displayCount = 2;
