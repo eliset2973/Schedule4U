@@ -26,7 +26,7 @@ public class Notifications extends AppCompatActivity {
         //for some reason I'm having trouble linking the button to the proper page.
         //when you link it to a page like the ToDos or something, it works fine. But not
         //for the class that I just created
-        Button notifAboutMe = (Button) findViewById(R.id.button10);
+        ImageButton notifAboutMe = (ImageButton) findViewById(R.id.imageButton2);
         notifAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), NotificationsAboutMe.class);
