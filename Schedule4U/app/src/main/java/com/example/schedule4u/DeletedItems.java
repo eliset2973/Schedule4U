@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class DeletedItems extends AppCompatActivity {
 
     @Override
@@ -22,12 +24,21 @@ public class DeletedItems extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Intent intent = getIntent();
-        String Name = intent.getStringExtra("deletedItem");
-        System.out.print("printing message");
-        System.out.print(Name);
-        TextView textView56 = (TextView) findViewById(R.id.textView56);
-        textView56.setText(Name);
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(), true);
+        List<Activity_S4U> displayList = accessor.lists.deleted;
+
+        if (displayList.size()>0) {
+            TextView textView56 = (TextView) findViewById(R.id.textView56);
+            textView56.setText(displayList.get(displayList.size()-1).name);
+        }
+
+//        Intent intent = getIntent();
+//        String Name = intent.getStringExtra("deletedItem");
+//        System.out.print("printing message");
+//        System.out.print(Name);
+//        TextView textView56 = (TextView) findViewById(R.id.textView56);
+//        textView56.setText(Name);
 
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -62,4 +73,18 @@ public class DeletedItems extends AppCompatActivity {
         //Be careful! This is code for image button not ordinarily button//
 
     }
+
+    protected void displayDataFromSave() {
+        // Starting code for transfering data across activities and displaying it =-----------------
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(), true);
+        List<Activity_S4U> displayList = accessor.lists.deleted;
+
+        if (displayList.size()>0) {
+            TextView textView56 = (TextView) findViewById(R.id.textView56);
+            textView56.setText(displayList.get(0).name);
+        }
+
+    }
+
 }

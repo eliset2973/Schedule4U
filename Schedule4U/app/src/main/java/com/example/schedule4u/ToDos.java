@@ -169,10 +169,10 @@ public class ToDos extends AppCompatActivity {
                         getApplicationContext(),true);
                 List<Activity_S4U> displayList = accessor.lists.active;
                 if (displayList.size()>2) {
+                    List<Activity_S4U> deletedList = accessor.lists.deleted;
+                    deletedList.add(displayList.get(2));
                     Intent myIntent = new Intent(view.getContext(), DeletedItems.class);
                     myIntent.putExtra("deletedItem", displayList.get(2).name);
-                    System.out.print("printing intent");
-                    System.out.print(displayList.get(2).name);
                     displayList.remove(2);
                     accessor.save(getApplicationContext());
                     startActivityForResult(myIntent, 0);
