@@ -6,8 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.w3c.dom.Text;
+
 public class create_event_edit extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,9 +69,74 @@ public class create_event_edit extends AppCompatActivity{
 //            }
 //        });
 
+        Button addtask=(Button)findViewById(R.id.Editeventsubmit);
+        EditText nameoftask=(EditText)findViewById(R.id.AddTask);
+        EditText timeoftask=(EditText)findViewById(R.id.TimeForTask);
+        EditText levelofimportance=(EditText)findViewById(R.id.Levelofimportance);
+        EditText location=(EditText)findViewById(R.id.moreDetails);
+        EditText startTime = (EditText)findViewById(R.id.startTIME);
+        EditText endTime = (EditText)findViewById(R.id.EndTime);
+        addtask.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                try {
+                    Activity_S4U CreatedActivity = new Activity_S4U();
+                    Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(), true);
+                    if (accessor.lists.active.size()>1) {
+                        CreatedActivity = accessor.lists.active.get(1);
+                    }
 
+                    String taskname = nameoftask.getText().toString();
+                    String tasktime = timeoftask.getText().toString();
+                    String importancelevel = levelofimportance.getText().toString();
+                    String tasklocation = location.getText().toString();
+                    Intent intent = new Intent(getApplicationContext(), ToDos.class);
+                    intent.putExtra("taskname", taskname);
+                    intent.putExtra("tasktime", tasktime);
+                    intent.putExtra("importancelevel", importancelevel);
+                    intent.putExtra("tasklocation", tasklocation);
+                    startActivity(intent);
+
+                    CreatedActivity.name = taskname;
+                    //CreatedActivity.time_alotted = Integer.parseInt(tasktime);
+                    //CreatedActivity.importance = Integer.parseInt(importancelevel); These four lines lines cause error
+                    //CreatedActivity.start_time = Time.valueOf(startTime.getText().toString());
+                    //CreatedActivity.end_time = Time.valueOf(endTime.getText().toString());
+                    CreatedActivity.start_time_string = startTime.getText().toString();
+                    CreatedActivity.end_time_string = endTime.getText().toString();
+                    CreatedActivity.importance_string = importancelevel;
+
+                    // save
+                    accessor.save(getApplicationContext());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println(e);
+                    System.out.println("Invalid input on create task Activity");
+                }
+
+            }
+
+        });
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(),true);
+        Activity_S4U currentTask = accessor.lists.active.get(accessor.edit_task_index);
+        currentTask = accessor.lists.active.get(1); // hacky fix because passing through edit_task_index didnt work for some reason
+        // System.out.println("Edit task index is " + accessor.edit_task_index + " and currentTask.name is" + currentTask.name + " in OnResume() create_event_edit.java"); // for debugging above issue
+
+        TextView AddTask = (TextView) findViewById(R.id.AddTask);
+        AddTask.setText(currentTask.name);
+
+        TextView startTIME = (TextView) findViewById(R.id.startTIME);
+        startTIME.setText(currentTask.start_time_string);
+        TextView EndTime = (TextView) findViewById(R.id.EndTime);
+        EndTime.setText(currentTask.end_time_string);
+
+        TextView Levelofimportance = (TextView) findViewById(R.id.Levelofimportance);
+        Levelofimportance.setText(currentTask.importance_string);
 
     }
-
 
 }

@@ -14,6 +14,7 @@ import android.content.Context;
 public class Activity_S4U_Data_Accessor {
     // lists is an object that contains all of our S4U Activities
     public Activity_S4U_Lists lists;
+    public int edit_task_index;
     public boolean usedSavedData;
     //public Context context;
     public String filename;
