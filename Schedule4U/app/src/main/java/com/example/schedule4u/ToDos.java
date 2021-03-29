@@ -159,8 +159,8 @@ public class ToDos extends AppCompatActivity {
                 if (displayList.size()>2) {
                     displayList.remove(2);
                     accessor.save(getApplicationContext());
-                    displayDataFromSave();
                 }
+                displayDataFromSave();
             }
         });
     }
@@ -171,7 +171,7 @@ public class ToDos extends AppCompatActivity {
                 getApplicationContext(),true);
         List<Activity_S4U> displayList = accessor.lists.active;
 
-        // will display first 3 valeus of displayList
+        // will display first 3 values of displayList
         int displayCount = 0;
         if (displayList.size()>displayCount) {
             TextView textView44 = (TextView) findViewById(R.id.textView44);
@@ -226,6 +226,14 @@ public class ToDos extends AppCompatActivity {
             // set priority
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
             prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+        } else {
+            TextView eventtitletobeadded = (TextView) findViewById(R.id.eventtitletobeadded);
+            eventtitletobeadded.setText("");
+            TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
+            timetobeadded.setText("");
+            TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
+            prioritytobeadded.setText("");
+
         }
     }
     @Override
