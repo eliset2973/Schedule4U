@@ -112,7 +112,7 @@ public class ToDos extends AppCompatActivity {
         ImageButton toDosAboutMe = (ImageButton) findViewById(R.id.todos_aboutme2);
         toDosAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), create_event_edit.class);
+                Intent myIntent = new Intent(view.getContext(), ToDosAboutMe.class);
                 startActivityForResult(myIntent, 0);
             }
 
