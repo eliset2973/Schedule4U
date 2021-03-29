@@ -14,6 +14,9 @@ public class Activity_S4U implements java.io.Serializable {
     public String details;
     public int splitTask;
     public boolean completed;
+    public String start_time_string;
+    public String end_time_string;
+    public String importance_string;
 
     // for now we just have a 0 argument constructor filled with dummy values
     public Activity_S4U() {
@@ -26,6 +29,9 @@ public class Activity_S4U implements java.io.Serializable {
         this.details = "Details placeholder";
         this.splitTask = 1;
         this.completed = false;
+        start_time_string = start_time.toString();
+        end_time_string = end_time.toString();
+        importance_string = Integer.toString(importance);
     }
 
     public Activity_S4U(String placeholder, int time, Date completeBy, int importance, Time start, Time end, String extra, int split) {
@@ -38,6 +44,9 @@ public class Activity_S4U implements java.io.Serializable {
         this.details = "Details placeholder";
         this.splitTask = 1;
         this.completed = false;
+        start_time_string = start_time.toString();
+        end_time_string = end_time.toString();
+        importance_string = Integer.toString(importance);
     }
 
     /*public static void main(String[] args) {

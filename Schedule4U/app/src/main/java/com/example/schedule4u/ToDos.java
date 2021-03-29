@@ -25,10 +25,10 @@ public class ToDos extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        TextView name = (TextView)findViewById(R.id.eventtitletobeadded);
-        TextView time = (TextView)findViewById(R.id.timetobeadded);
-        TextView importance = (TextView)findViewById(R.id.prioritytobeadded);
-        TextView location = (TextView)findViewById(R.id.locationtobeadded);
+        TextView name = (TextView) findViewById(R.id.eventtitletobeadded);
+        TextView time = (TextView) findViewById(R.id.timetobeadded);
+        TextView importance = (TextView) findViewById(R.id.prioritytobeadded);
+//        TextView location = (TextView)findViewById(R.id.locationtobeadded);
 
         // create the get Intent object
 
@@ -43,14 +43,14 @@ public class ToDos extends AppCompatActivity {
         name.setText(Name);
         time.setText(Time);
         importance.setText(Importance);
-        location.setText(Location);
+//        location.setText(Location);
 
 
 ///////////////////////
-        TextView name_1 = (TextView)findViewById(R.id.titletobeedited);
-        TextView time_1 = (TextView)findViewById(R.id.timetobeedited);
-        TextView importance_1 = (TextView)findViewById(R.id.prioritytobechanged);
-        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
+        TextView name_1 = (TextView) findViewById(R.id.titletobeedited);
+        TextView time_1 = (TextView) findViewById(R.id.timetobeedited);
+        TextView importance_1 = (TextView) findViewById(R.id.prioritytobechanged);
+//        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
 
         // create the get Intent object
 
@@ -65,8 +65,7 @@ public class ToDos extends AppCompatActivity {
         name_1.setText(Name_1);
         time_1.setText(Time_1);
         importance_1.setText(Importance_1);
-        location_1.setText(Location_1);
-
+//        location_1.setText(Location_1);
 
 
 //        TextView name_ = (TextView)findViewById(R.id.titletobeedited);
@@ -88,8 +87,6 @@ public class ToDos extends AppCompatActivity {
 //        time_.setText(Time_);
 //        importance_.setText(Importance_);
 //        location_.setText(Location_);
-
-
 
 
         ///////////////////////////
@@ -142,7 +139,7 @@ public class ToDos extends AppCompatActivity {
         });
 
         //Be careful! This is code for image button not ordinarily button//
-        ImageButton homebutton_10= (ImageButton) findViewById(R.id.homebutton10);
+        ImageButton homebutton_10 = (ImageButton) findViewById(R.id.homebutton10);
 
         homebutton_10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -152,12 +149,29 @@ public class ToDos extends AppCompatActivity {
         });
         //Be careful! This is code for image button not ordinarily button//
 
+        // delete 3rd task
+        Button toDoDelete3 = (Button) findViewById(R.id.toDosDelete3);
+        toDoDelete3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                        getApplicationContext(),true);
+                List<Activity_S4U> displayList = accessor.lists.active;
+                if (displayList.size()>2) {
+                    displayList.remove(2);
+                    accessor.save(getApplicationContext());
+                }
+                displayDataFromSave();
+            }
+        });
+    }
+
+    protected void displayDataFromSave() {
         // Starting code for transfering data across activities and displaying it =-----------------
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
                 getApplicationContext(),true);
         List<Activity_S4U> displayList = accessor.lists.active;
 
-        // will display first 3 valeus of displayList
+        // will display first 3 values of displayList
         int displayCount = 0;
         if (displayList.size()>displayCount) {
             TextView textView44 = (TextView) findViewById(R.id.textView44);
@@ -201,17 +215,34 @@ public class ToDos extends AppCompatActivity {
             eventtitletobeadded.setText(displayList.get(displayCount).name);
 
             //get and display time
-            String startString = displayList.get(displayCount).start_time.toString();
-            String endString = displayList.get(displayCount).end_time.toString();
+            //String startString = displayList.get(displayCount).start_time.toString();
+            //String endString = displayList.get(displayCount).end_time.toString();
+            String startString = displayList.get(displayCount).start_time_string;
+            String endString = displayList.get(displayCount).end_time_string;
             // last 3 characters are seconds so dont display
-            String timeString = startString.substring(0, startString.length()-3)
-                    + " - " + endString.substring(0,endString.length()-3);
+            //String timeString = startString.substring(0, startString.length()-3)
+            //        + " - " + endString.substring(0,endString.length()-3);
+            String timeString = startString + " - " + endString;
             TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
             timetobeadded.setText(timeString);
 
             // set priority
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
-            prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+            //prioritytobeadded.setText(""+displayList.get(displayCount).importance);
+            prioritytobeadded.setText(""+displayList.get(displayCount).importance_string);
+        } else {
+            TextView eventtitletobeadded = (TextView) findViewById(R.id.eventtitletobeadded);
+            eventtitletobeadded.setText(" ");
+            TextView timetobeadded = (TextView) findViewById(R.id.timetobeadded);
+            timetobeadded.setText(" ");
+            TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
+            prioritytobeadded.setText(" ");
+
         }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        displayDataFromSave();
     }
 }

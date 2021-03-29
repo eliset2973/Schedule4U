@@ -30,14 +30,14 @@
         android:layout_width="285dp"
         android:layout_height="69dp"
         android:text="Calendar"
-        android:textColor="#FFC107"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        app:layout_constraintVertical_bias="0.126" />
 
     <TextView
         android:id="@+id/textView4"
@@ -45,7 +45,7 @@
         android:layout_height="182dp"
         android:text="1. This is the calender page where you have the ability to click on a
 day and see the tasks that are scheduled for that day. "
-        android:textColor="#FFC107"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@ day and see the tasks that are scheduled for that day. "
         android:layout_height="276dp"
         android:text="2. You are able to see tasks that are both scheduled in the future and in the past alongside
 being able to see the tasks you have scheduled for that day. Simply scroll down to see different days. "
-        android:textColor="#FFC107"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

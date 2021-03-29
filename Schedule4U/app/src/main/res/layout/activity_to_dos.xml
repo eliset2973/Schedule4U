@@ -62,8 +62,11 @@
         app:popupTheme="@style/Theme.Schedule4U.PopupOverlay" />
 
     <include
+        android:id="@+id/include3"
         layout="@layout/content_todos_items"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/include3"
+        app:layout_anchorGravity="end|center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

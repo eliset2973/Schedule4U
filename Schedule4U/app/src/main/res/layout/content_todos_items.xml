@@ -9,7 +9,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/umn_color"><![CDATA[>
+        android:background="@drawable/umn_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-171dp"><![CDATA[>
+
+
+
+
 
 
 
@@ -22,20 +29,24 @@
             android:text="To Do's For Today"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="69dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.081" />
 
         <ImageButton
             android:id="@+id/todos_aboutme2"
             android:layout_width="65dp"
             android:layout_height="30dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
             android:contentDescription="@string/about_me"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/aboutsymb"
-            tools:layout_editor_absoluteY="69dp" />
+            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.098"
+            app:srcCompat="@drawable/aboutsymb" />
 
         <TextView
             android:id="@+id/textView44"
@@ -43,8 +54,12 @@
             android:layout_height="wrap_content"
             android:text="Send e-mail to professor"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="176dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.316"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.24" />
 
         <TextView
             android:id="@+id/textView45"
@@ -52,8 +67,12 @@
             android:layout_height="wrap_content"
             android:text="9:00 am - 10:00 am"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="199dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.305"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.266" />
 
         <TextView
             android:id="@+id/textView47"
@@ -61,8 +80,12 @@
             android:layout_height="wrap_content"
             android:text="Priority: 2"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="218dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.292" />
 
         <TextView
             android:id="@+id/titletobeedited"
@@ -72,8 +95,12 @@
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFCFC"
             android:textColorHint="#FAFAFA"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="283dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.262"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.394" />
 
         <TextView
             android:id="@+id/textView58"
@@ -81,8 +108,12 @@
             android:layout_height="wrap_content"
             android:text="Time:"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="302dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.42" />
 
         <TextView
             android:id="@+id/timetobeedited"
@@ -91,28 +122,40 @@
             android:hint="1:00pm-2:00pm"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="302dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.369"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.419" />
 
         <TextView
             android:id="@+id/textView51"
-            android:layout_width="64dp"
-            android:layout_height="0dp"
+            android:layout_width="119dp"
+            android:layout_height="28dp"
             android:text="Priority:"
             android:textColor="#FBF7F7"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="321dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.281"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            app:layout_constraintVertical_bias="0.363" />
 
         <TextView
             android:id="@+id/prioritytobechanged"
-            android:layout_width="64dp"
-            android:layout_height="0dp"
+            android:layout_width="67dp"
+            android:layout_height="31dp"
             android:hint="1"
             android:textColor="#FFF8F8"
             android:textColorHighlight="#F6F3F3"
             android:textColorHint="#FFFFFF"
-            tools:layout_editor_absoluteX="139dp"
-            tools:layout_editor_absoluteY="321dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.383"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.454" />
 
         <TextView
             android:id="@+id/eventtitletobeadded"
@@ -122,8 +165,12 @@
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="400dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.577" />
 
         <TextView
             android:id="@+id/textView52"
@@ -133,8 +180,12 @@
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FAFAFA"
             android:textColorHint="#FFFEFE"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="426dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.229"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.591" />
 
         <TextView
             android:id="@+id/timetobeadded"
@@ -145,8 +196,12 @@
             android:textColorHighlight="#FFFBFB"
             android:textColorHint="#FFFCFC"
             android:textColorLink="#FDFDFD"
-            tools:layout_editor_absoluteX="136dp"
-            tools:layout_editor_absoluteY="426dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.37"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.592" />
 
         <TextView
             android:id="@+id/textView53"
@@ -154,8 +209,12 @@
             android:layout_height="30dp"
             android:text="Priority:"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="445dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.234"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.629" />
 
         <TextView
             android:id="@+id/prioritytobeadded"
@@ -166,8 +225,12 @@
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF"
             android:textColorLink="#FFFFFF"
-            tools:layout_editor_absoluteX="149dp"
-            tools:layout_editor_absoluteY="446dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.367"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.624" />
 
         <Button
             android:id="@+id/edit"
@@ -177,10 +240,12 @@
             android:linksClickable="true"
             android:text="Edit"
             app:backgroundTint="#FFCC33"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintHorizontal_bias="0.292"
             app:layout_constraintStart_toEndOf="@+id/eventtitletobeadded"
-            tools:layout_editor_absoluteY="400dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.587" />
 
         <Button
             android:id="@+id/Edit1"
@@ -188,8 +253,12 @@
             android:layout_height="wrap_content"
             android:text="Edit"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="272dp"
-            tools:layout_editor_absoluteY="172dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.783"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.251" />
 
         <Button
             android:id="@+id/edit2"
@@ -199,18 +268,26 @@
             android:linksClickable="true"
             android:text="Edit"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="272dp"
-            tools:layout_editor_absoluteY="294dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.783"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.422"
+            android:focusable="true" />
 
         <Button
-            android:id="@+id/x"
+            android:id="@+id/toDosDelete3"
             android:layout_width="43dp"
             android:layout_height="40dp"
             android:text="x"
             app:backgroundTint="#FFCC33"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/edit"
-            tools:layout_editor_absoluteY="405dp" />
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.581" />
 
         <Button
             android:id="@+id/x2"
@@ -218,8 +295,12 @@
             android:layout_height="40dp"
             android:text="x"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="364dp"
-            tools:layout_editor_absoluteY="302dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.418" />
 
         <Button
             android:id="@+id/x1"
@@ -227,8 +308,12 @@
             android:layout_height="40dp"
             android:text="x"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="365dp"
-            tools:layout_editor_absoluteY="178dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.248" />
 
         <Button
             android:id="@+id/addNewTask"
@@ -236,8 +321,12 @@
             android:layout_height="58dp"
             android:text="Add NewTask"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="602dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.892" />
 
         <Button
             android:id="@+id/deletedItems"
@@ -245,8 +334,12 @@
             android:layout_height="60dp"
             android:text="deletedItems"
             app:backgroundTint="#FFCC33"
-            tools:layout_editor_absoluteX="222dp"
-            tools:layout_editor_absoluteY="603dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.895" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -279,18 +372,5 @@
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/AddNewTask"
-        android:layout_width="178dp"
-        android:layout_height="58dp"
-        android:text="Add NewTask"
-        app:backgroundTint="#FFCC33"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
