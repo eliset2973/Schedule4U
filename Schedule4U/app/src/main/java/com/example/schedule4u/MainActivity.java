@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // this block resets data each restart
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
+        accessor.save(getApplicationContext());
+
         // to do's for today screen
         Button todo = (Button) findViewById(R.id.button2);
         todo.setOnClickListener(new View.OnClickListener() {

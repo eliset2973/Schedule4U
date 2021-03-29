@@ -11,6 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.sql.Time;
+
 public class CreateTask extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +37,42 @@ public class CreateTask extends AppCompatActivity{
         EditText timeoftask=(EditText)findViewById(R.id.startTime);
         EditText levelofimportance=(EditText)findViewById(R.id.levelofimportance);
         EditText location=(EditText)findViewById(R.id.extraDetails);
+        EditText startTime = (EditText)findViewById(R.id.startTime);
+        EditText endTime = (EditText)findViewById(R.id.endTime);
+
         addtask.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String taskname = nameoftask.getText().toString();
-                String tasktime = timeoftask.getText().toString();
-                String importancelevel= levelofimportance.getText().toString();
-                String tasklocation= location.getText().toString();
-                Intent intent = new Intent(getApplicationContext(), ToDos.class);
-                intent.putExtra("taskname", taskname);
-                intent.putExtra("tasktime", tasktime);
-                intent.putExtra("importancelevel", importancelevel);
-                intent.putExtra("tasklocation", tasklocation);
-                startActivity(intent);
+                try {
+                    Activity_S4U CreatedActivity = new Activity_S4U();
+                    Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(), true);
+
+                    String taskname = nameoftask.getText().toString();
+                    String tasktime = timeoftask.getText().toString();
+                    String importancelevel = levelofimportance.getText().toString();
+                    String tasklocation = location.getText().toString();
+                    Intent intent = new Intent(getApplicationContext(), ToDos.class);
+                    intent.putExtra("taskname", taskname);
+                    intent.putExtra("tasktime", tasktime);
+                    intent.putExtra("importancelevel", importancelevel);
+                    intent.putExtra("tasklocation", tasklocation);
+                    startActivity(intent);
+
+                    CreatedActivity.name = taskname;
+                    //CreatedActivity.time_alotted = Integer.parseInt(tasktime);
+                    //CreatedActivity.importance = Integer.parseInt(importancelevel); These four lines lines cause error
+                    //CreatedActivity.start_time = Time.valueOf(startTime.getText().toString());
+                    //CreatedActivity.end_time = Time.valueOf(endTime.getText().toString());
+
+                    // add created activity to data store and save
+                    //accessor.lists.active.add(CreatedActivity); added above
+                    accessor.lists.active.add(CreatedActivity);
+                    accessor.save(getApplicationContext());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println(e);
+                    System.out.println("Invalid input on create task Activity");
+                }
+
             }
         });
 

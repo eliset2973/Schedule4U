@@ -25,9 +25,9 @@ public class ToDos extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        TextView name = (TextView)findViewById(R.id.eventtitletobeadded);
-        TextView time = (TextView)findViewById(R.id.timetobeadded);
-        TextView importance = (TextView)findViewById(R.id.prioritytobeadded);
+        TextView name = (TextView) findViewById(R.id.eventtitletobeadded);
+        TextView time = (TextView) findViewById(R.id.timetobeadded);
+        TextView importance = (TextView) findViewById(R.id.prioritytobeadded);
 //        TextView location = (TextView)findViewById(R.id.locationtobeadded);
 
         // create the get Intent object
@@ -47,9 +47,9 @@ public class ToDos extends AppCompatActivity {
 
 
 ///////////////////////
-        TextView name_1 = (TextView)findViewById(R.id.titletobeedited);
-        TextView time_1 = (TextView)findViewById(R.id.timetobeedited);
-        TextView importance_1 = (TextView)findViewById(R.id.prioritytobechanged);
+        TextView name_1 = (TextView) findViewById(R.id.titletobeedited);
+        TextView time_1 = (TextView) findViewById(R.id.timetobeedited);
+        TextView importance_1 = (TextView) findViewById(R.id.prioritytobechanged);
 //        TextView location_1 = (TextView)findViewById(R.id.locationtobeedited);
 
         // create the get Intent object
@@ -66,7 +66,6 @@ public class ToDos extends AppCompatActivity {
         time_1.setText(Time_1);
         importance_1.setText(Importance_1);
 //        location_1.setText(Location_1);
-
 
 
 //        TextView name_ = (TextView)findViewById(R.id.titletobeedited);
@@ -88,8 +87,6 @@ public class ToDos extends AppCompatActivity {
 //        time_.setText(Time_);
 //        importance_.setText(Importance_);
 //        location_.setText(Location_);
-
-
 
 
         ///////////////////////////
@@ -142,7 +139,7 @@ public class ToDos extends AppCompatActivity {
         });
 
         //Be careful! This is code for image button not ordinarily button//
-        ImageButton homebutton_10= (ImageButton) findViewById(R.id.homebutton10);
+        ImageButton homebutton_10 = (ImageButton) findViewById(R.id.homebutton10);
 
         homebutton_10.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -152,6 +149,23 @@ public class ToDos extends AppCompatActivity {
         });
         //Be careful! This is code for image button not ordinarily button//
 
+        // delete 3rd task
+        Button toDoDelete3 = (Button) findViewById(R.id.toDosDelete3);
+        toDoDelete3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                        getApplicationContext(),true);
+                List<Activity_S4U> displayList = accessor.lists.active;
+                if (displayList.size()>2) {
+                    displayList.remove(2);
+                    accessor.save(getApplicationContext());
+                    displayDataFromSave();
+                }
+            }
+        });
+    }
+
+    protected void displayDataFromSave() {
         // Starting code for transfering data across activities and displaying it =-----------------
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
                 getApplicationContext(),true);
@@ -213,5 +227,10 @@ public class ToDos extends AppCompatActivity {
             TextView prioritytobeadded = (TextView) findViewById(R.id.prioritytobeadded);
             prioritytobeadded.setText(""+displayList.get(displayCount).importance);
         }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        displayDataFromSave();
     }
 }

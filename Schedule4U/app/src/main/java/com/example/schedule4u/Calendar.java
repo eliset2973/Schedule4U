@@ -18,7 +18,37 @@ import android.widget.TextView;
 import java.util.List;
 
 public class Calendar extends AppCompatActivity {
+@Override
+protected void onResume() {
+    super.onResume();
+    // change to content layout
+    Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
+    List<Activity_S4U> displayList = accessor.lists.active;
+    TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+    TextView textViewCalendarActivityName2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
+    TextView textViewCalendarActivityName3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
+    if (displayList.size()>0) {
+        textViewCalendarActivityName1.setText(displayList.get(0).name);
+        //System.out.println(displayList.get(0).name);
+    } else {
+        textViewCalendarActivityName1.setText("");
+    }
 
+    try {
+        if (displayList.size()>1) {
+            textViewCalendarActivityName2.setText(displayList.get(1).name);
+        } else {
+            textViewCalendarActivityName2.setText("");
+        }
+        if (displayList.size()>2) {
+            textViewCalendarActivityName3.setText(displayList.get(2).name);
+        } else {
+            textViewCalendarActivityName3.setText("");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,20 +67,8 @@ public class Calendar extends AppCompatActivity {
         printList = accessor.lists.active;
         for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);*/
 
-        // change to content layout
-        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
-        List<Activity_S4U> displayList = accessor.lists.active;
-        TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
-        textViewCalendarActivityName1.setText(displayList.get(0).name);
-        System.out.println(displayList.get(0).name);
 
-        try {
-            ((TextView) findViewById(R.id.textViewCalendarActivityName2)).setText(displayList.get(1).name);
-            ((TextView) findViewById(R.id.textViewCalendarActivityName3)).setText(displayList.get(2).name);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        System.out.println(((TextView) findViewById(R.id.textViewCalendarActivityName2)).getText());
+        //System.out.println(((TextView) findViewById(R.id.textViewCalendarActivityName2)).getText());
 
         //change back to activity layout
         //setContentView(R.layout.activity_calendar);

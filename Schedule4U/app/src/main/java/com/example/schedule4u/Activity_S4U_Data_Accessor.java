@@ -29,6 +29,7 @@ public class Activity_S4U_Data_Accessor {
         // use example data
         if (!usedSavedData) {
             lists = new Activity_S4U_Lists(true);
+            System.out.println("Failed to load data and created new data");
             save(context);
         }
     }
