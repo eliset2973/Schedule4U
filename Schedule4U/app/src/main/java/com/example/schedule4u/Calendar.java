@@ -60,7 +60,7 @@ protected void onResume() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button calendarAboutMe = (Button) findViewById(R.id.button9);
+        ImageButton calendarAboutMe = (ImageButton) findViewById(R.id.button9);
         calendarAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), CalendarAboutMe.class);

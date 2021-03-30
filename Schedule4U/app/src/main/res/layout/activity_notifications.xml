@@ -44,24 +44,24 @@
 
     <TextView
         android:id="@+id/notification_1"
-        android:layout_width="203dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_width="240dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:background="#FFCC33"
         android:text="Don't forget to walk your dog"
         android:textColor="#040303"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.344" />
 
     <TextView
         android:id="@+id/notif_1_time"
-        android:layout_width="203dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:background="#FFCC33"
         android:text="5 minutes ago"
         android:textColor="#0C0C0C"
@@ -69,59 +69,56 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.383" />
+        app:layout_constraintVertical_bias="0.259" />
 
     <TextView
         android:id="@+id/notification_2"
-        android:layout_width="209dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginBottom="80dp"
+        android:layout_width="240dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:background="#FFCC33"
         android:text="                                                                   Don't forget to read for an hour"
         android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notif_2_time" />
 
     <TextView
         android:id="@+id/notif_2_time"
-        android:layout_width="208dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="112dp"
         android:background="#FFCC33"
         android:text="10 minutes ago"
         android:textColor="#000000"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/notification_2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification_1" />
 
     <ImageButton
         android:id="@+id/image_button_1"
         android:layout_width="59dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginRight="88dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="228dp"
         android:background="#007A0019"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/notification_1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageButton
         android:id="@+id/image_button_2"
-        android:layout_width="77dp"
-        android:layout_height="39dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="152dp"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="216dp"
         android:background="#007A0019"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/notification_2"
+        app:layout_constraintTop_toBottomOf="@+id/image_button_1"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageButton
@@ -143,9 +140,10 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="50dp"
         android:text="Notifications"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/homebutton4"
         app:layout_constraintTop_toTopOf="parent" />
 
