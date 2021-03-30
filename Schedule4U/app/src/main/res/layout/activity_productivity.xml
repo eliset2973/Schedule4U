@@ -84,7 +84,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/raster" />
 
-    <View
+    <ImageView
         android:id="@+id/prod_rectangle2"
         android:layout_width="115dp"
         android:layout_height="20dp"
@@ -318,12 +318,15 @@
     <ImageView
         android:id="@+id/bar"
         android:layout_width="184dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prod_time_spent"
-        app:srcCompat="@drawable/prod_yellow_bar" />
+        app:srcCompat="@drawable/prod_yellow_bar"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
 
 
 
