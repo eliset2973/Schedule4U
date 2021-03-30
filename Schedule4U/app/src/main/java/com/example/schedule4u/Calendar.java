@@ -1,5 +1,6 @@
 package com.example.schedule4u;
 
+import android.widget.CalendarView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -48,6 +49,9 @@ protected void onResume() {
     } catch (Exception e) {
         e.printStackTrace();
     }
+    CalendarView myCalendar = (CalendarView) findViewById(R.id.calendarView);
+    long myDate = myCalendar.getDate();
+    System.out.println (myDate);
 }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,40 +60,12 @@ protected void onResume() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // This block tests functionality of saving data
-        /* Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
-        List<Activity_S4U> printList = accessor.lists.active;
-        for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);
-        /*printList.add(new Activity_S4U());
-        printList.get(5).name = printList.get(5).name + " 6 (test adding)";
-        accessor.save(getApplicationContext());
-        accessor.load(getApplicationContext());
-        printList = accessor.lists.active;
-        for (int i = 0; i<printList.size(); i++) System.out.println(printList.get(i).name);*/
-
-
-        //System.out.println(((TextView) findViewById(R.id.textViewCalendarActivityName2)).getText());
-
-        //change back to activity layout
-        //setContentView(R.layout.activity_calendar);
-
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
-        //for some reason I'm having trouble linking the button to the proper page.
-        //when you link it to a page like the ToDos or something, it works fine. But not
-        //for the class that I just created
         Button calendarAboutMe = (Button) findViewById(R.id.button9);
         calendarAboutMe.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), CalendarAboutMe.class);
                 startActivityForResult(myIntent, 0);
+
             }
 
         });
@@ -106,6 +82,9 @@ protected void onResume() {
         });
         //Be careful! This is code for image button not ordinarily button//
 
-
+        CalendarView myCalendar = (CalendarView) findViewById(R.id.calendarView);
+        long myDate = myCalendar.getDate();
+        System.out.println (myDate);
     }
+
 }

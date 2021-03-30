@@ -16,16 +16,6 @@ public class CalendarAboutMe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar_about_me);
 
-
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_1= (ImageButton) findViewById(R.id.homebutton1);
         homebutton_1.setOnClickListener(new View.OnClickListener() {
