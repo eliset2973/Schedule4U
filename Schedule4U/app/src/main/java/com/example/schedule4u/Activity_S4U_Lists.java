@@ -19,7 +19,10 @@ public class Activity_S4U_Lists implements java.io.Serializable {
                 Activity_S4U temp = new Activity_S4U();
                 temp.name = temp.name + " " + i.toString();
                 active.add(temp);
+                if(i==1) active.get(0).name = "Send e-mail to professor";
+                if(i==2) active.get(1).name = "Do problem set";
             }
+
         }
     }
 }
