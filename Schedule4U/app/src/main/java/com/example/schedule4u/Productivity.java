@@ -47,6 +47,7 @@ public class Productivity extends AppCompatActivity {
             }
         });
 
+        int num_points = 0;
         int total_finished = 0;
         int total_not_finished = 0;
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
@@ -54,6 +55,7 @@ public class Productivity extends AppCompatActivity {
         for (Activity_S4U myActivity : displayList){
             if (myActivity.completed){
                 total_finished += myActivity.time_alotted;
+                num_points ++;
             }
             else {
                 total_not_finished += myActivity.time_alotted;
@@ -68,6 +70,11 @@ public class Productivity extends AppCompatActivity {
         old_finished.setText(finished);
         TextView old_not_finished = (TextView) findViewById(R.id.prod_text1);
         old_not_finished.setText(not_finished);
+        TextView points_today = (TextView) findViewById(R.id.prod_text9);
+        points_today.setText(Integer.toString(num_points));
+        TextView prod_score = (TextView) findViewById(R.id.prod_text4);
+        String score = ""+(num_points+3)+"/10 points";
+        prod_score.setText(score);
         ProgressBar progressBar1= (ProgressBar) findViewById(R.id.progressBar1);
         progressBar1.setProgress(total_not_finished*100/total);
         ProgressBar progressBar2= (ProgressBar) findViewById(R.id.progressBar2);
@@ -81,7 +88,7 @@ public class Productivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        int num_points = 0;
         int total_finished = 0;
         int total_not_finished = 0;
         Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
@@ -89,6 +96,7 @@ public class Productivity extends AppCompatActivity {
         for (Activity_S4U myActivity : displayList){
             if (myActivity.completed){
                 total_finished += myActivity.time_alotted;
+                num_points+=1;
             }
             else {
                 total_not_finished += myActivity.time_alotted;
@@ -103,10 +111,14 @@ public class Productivity extends AppCompatActivity {
         old_finished.setText(finished);
         TextView old_not_finished = (TextView) findViewById(R.id.prod_text1);
         old_not_finished.setText(not_finished);
+        TextView points_today = (TextView) findViewById(R.id.prod_text9);
+        points_today.setText(Integer.toString(num_points));
+        TextView prod_score = (TextView) findViewById(R.id.prod_text4);
+        String score = ""+(num_points+3)+"/15 points";
+        prod_score.setText(score);
         ProgressBar progressBar1= (ProgressBar) findViewById(R.id.progressBar1);
         progressBar1.setProgress(total_not_finished*100/total);
         ProgressBar progressBar2= (ProgressBar) findViewById(R.id.progressBar2);
         progressBar2.setProgress(total_finished*100/total);
-
     }
 }

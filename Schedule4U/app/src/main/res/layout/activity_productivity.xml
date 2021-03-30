@@ -152,7 +152,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginBottom="128dp"
-        android:text="@string/_8"
+        android:text="1"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -180,7 +180,7 @@
         android:contentDescription="@string/oval_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/oval" />
+        app:srcCompat="@drawable/oval4" />
 
     <TextView
         android:id="@+id/prod_text12"
@@ -213,7 +213,7 @@
         android:layout_marginStart="192dp"
         android:layout_marginLeft="192dp"
         android:layout_marginBottom="128dp"
-        android:text="@string/_10"
+        android:text="1"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -238,7 +238,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginBottom="128dp"
-        android:text="@string/_14"
+        android:text="1"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -254,7 +254,7 @@
         android:contentDescription="@string/oval4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/oval4" />
+        app:srcCompat="@drawable/oval" />
 
     <TextView
         android:id="@+id/prod_text13"
