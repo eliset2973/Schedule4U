@@ -83,8 +83,34 @@ protected void onResume() {
         //Be careful! This is code for image button not ordinarily button//
 
         CalendarView myCalendar = (CalendarView) findViewById(R.id.calendarView);
-        long myDate = myCalendar.getDate();
-        System.out.println (myDate);
+        myCalendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month,
+                                            int dayOfMonth) {
+                String  curDate = String.valueOf(dayOfMonth);
+                String  Year = String.valueOf(year);
+                String  Month = String.valueOf(month);
+                if (curDate == "23"){
+                    TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+                    activity1.setText("Cook burgers");
+                    TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
+                    activity2.setText("Write essay");
+                    TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
+                    activity2.setText("See grandma");
+                }
+                if (curDate == "29"){
+                    TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+                    activity1.setText("Clean apartment");
+                    TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
+                    activity2.setText("Hang out with Lily");
+                    TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
+                    activity2.setText("Call mum");
+                }
+
+
+            }
+        });
     }
 
 }
