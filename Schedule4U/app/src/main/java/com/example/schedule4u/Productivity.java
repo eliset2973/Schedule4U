@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import java.io.ByteArrayOutputStream;
+import java.util.List;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,39 +44,25 @@ public class Productivity extends AppCompatActivity {
             }
         });
 
-        Bitmap originalImage = BitmapFactory.decodeResource(getResources(), R.drawable.prod_yellow_bar);
-        int width = originalImage.getWidth();
-        int height = originalImage.getHeight();
-
-        Matrix matrix = new Matrix();
-        float scaleWidth = ((float) width/2) / width;
-        float scaleHeight = ((float) height/2) / height;
-        matrix.postScale(scaleWidth, scaleHeight);
-
-
-        Bitmap resizedBitmap = Bitmap.createBitmap(originalImage, 0, 0, width, height, matrix, true);
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);
-        ImageView im=(ImageView)findViewById(R.id.prod_rectangle2);
-        im.setImageBitmap(resizedBitmap);
-
-
-
-//        ImageView imageView = findViewById(R.id.bar);
-//        ViewGroup.LayoutParams params = (ViewGroup.LayoutParams) imageView.getLayoutParams();
-//        params.width = 120;
-//        imageView.setLayoutParams(params);
-
-//        float percentageFinished = (float) 0.5;
-//        DisplayMetrics displaymetrics = new DisplayMetrics();
-//        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-//        int screenHeight = displaymetrics.heightPixels;
-//        int screenWidth = displaymetrics.widthPixels;
-//        ImageView myImageView = findViewById(R.id.bar);
-////        int imgHeight = (int) (screenHeight * 0.08);
-//        int imgWidth =  (int) (screenWidth * 0.4 * percentageFinished);
-////        myImageView.getLayoutParams().height = imgHeight;
-//        myImageView.getLayoutParams().width = imgWidth;
+        int total_finished = 0;
+        int total_not_finished = 0;
+        int total_leisure = 0;
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
+        List<Activity_S4U> displayList = accessor.lists.active;
+        for (Activity_S4U myActivity : displayList){
+            if (myActivity.importance_string == "Leisure"){
+                total_leisure += myActivity.time_alotted;
+            }
+            if (myActivity.completed){
+                total_finished += myActivity.time_alotted;
+            }
+            else {
+                total_not_finished += myActivity.time_alotted;
+            }
+        }
+        System.out.println("total_leisure: " + total_leisure);
+        System.out.println("total_finished: " + total_finished);
+        System.out.println("total_not_finished: " + total_not_finished);
 
     }
 }
