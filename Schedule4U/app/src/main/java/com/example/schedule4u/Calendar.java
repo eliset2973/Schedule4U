@@ -46,9 +46,12 @@ protected void onResume() {
         } else {
             textViewCalendarActivityName3.setText("");
         }
+
     } catch (Exception e) {
         e.printStackTrace();
     }
+
+
     CalendarView myCalendar = (CalendarView) findViewById(R.id.calendarView);
     long myDate = myCalendar.getDate();
     System.out.println (myDate);
@@ -91,7 +94,7 @@ protected void onResume() {
                 String  curDate = String.valueOf(dayOfMonth);
                 String  Year = String.valueOf(year);
                 String  Month = String.valueOf(month);
-                if (curDate == "23"){
+                if (curDate.equals("23")){
                     TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
                     activity1.setText("Cook burgers");
                     TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
@@ -99,7 +102,7 @@ protected void onResume() {
                     TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
                     activity2.setText("See grandma");
                 }
-                if (curDate == "29"){
+                if (curDate.equals("29")){
                     TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
                     activity1.setText("Clean apartment");
                     TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
