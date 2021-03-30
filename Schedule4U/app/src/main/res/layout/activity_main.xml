@@ -2,24 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/umn_color"><![CDATA[>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+    android:background="@drawable/umn_color"
+    tools:context=".Notifications">
 
     <TextView
         android:id="@+id/textView"
@@ -36,42 +23,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="206dp"
-        android:layout_height="57dp"
+        android:id="@+id/button2"
+        android:layout_width="204dp"
+        android:layout_height="52dp"
         android:layout_marginStart="104dp"
         android:layout_marginLeft="104dp"
-        android:layout_marginTop="440dp"
-        android:background="#ffcc33"
-        android:text="Productivity Score"
-        android:textColor="#7A0019"
-        app:backgroundTint="#FFCC33"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="205dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="144dp"
         android:background="#FFCC33"
-        android:text="Calendar"
-        android:textColor="#7A0019"
-        app:backgroundTint="#FFCC33"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="202dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginLeft="104dp"
-        android:layout_marginTop="284dp"
-        android:background="#FFCC33"
-        android:text="Recommended Events"
+        android:text="To Do's for Today"
         android:textColor="#7A0019"
         app:backgroundTint="#FFCC33"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +42,7 @@
         android:layout_height="56dp"
         android:layout_marginStart="104dp"
         android:layout_marginLeft="104dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="232dp"
         android:background="#FFCC33"
         android:text="Notifications"
         android:textColor="#7A0019"
@@ -92,14 +51,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="204dp"
-        android:layout_height="52dp"
+        android:id="@+id/button3"
+        android:layout_width="202dp"
+        android:layout_height="54dp"
         android:layout_marginStart="104dp"
         android:layout_marginLeft="104dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="324dp"
         android:background="#FFCC33"
-        android:text="To Do's for Today"
+        android:text="Recommended Events"
+        android:textColor="#7A0019"
+        app:backgroundTint="#FFCC33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="205dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="416dp"
+        android:background="#FFCC33"
+        android:text="Calendar"
+        android:textColor="#7A0019"
+        app:backgroundTint="#FFCC33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="206dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="512dp"
+        android:background="#ffcc33"
+        android:text="Productivity Score"
         android:textColor="#7A0019"
         app:backgroundTint="#FFCC33"
         app:layout_constraintStart_toStartOf="parent"
