@@ -12,8 +12,9 @@
         android:layout_height="match_parent"
         android:background="@drawable/umn_color"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="-171dp"><![CDATA[>
+        tools:layout_editor_absoluteY="0dp"><![CDATA[>
 
 
 
@@ -276,7 +277,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="21dp"
             android:layout_marginLeft="21dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="28dp"
             android:text="Edit"
             app:backgroundTint="#FFCC33"
             app:layout_constraintEnd_toStartOf="@+id/x1"
@@ -289,7 +290,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="31dp"
             android:layout_marginLeft="31dp"
-            android:layout_marginTop="73dp"
+            android:layout_marginTop="72dp"
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:clickable="true"
@@ -303,11 +304,11 @@
 
         <Button
             android:id="@+id/toDosDelete3"
-            android:layout_width="43dp"
-            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:layout_height="49dp"
             android:layout_marginStart="3dp"
             android:layout_marginLeft="3dp"
-            android:layout_marginTop="66dp"
+            android:layout_marginTop="56dp"
             android:layout_marginEnd="11dp"
             android:layout_marginRight="11dp"
             android:text="x"
@@ -319,10 +320,10 @@
         <Button
             android:id="@+id/x2"
             android:layout_width="43dp"
-            android:layout_height="40dp"
+            android:layout_height="49dp"
             android:layout_marginStart="3dp"
             android:layout_marginLeft="3dp"
-            android:layout_marginTop="81dp"
+            android:layout_marginTop="72dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="x"
@@ -334,10 +335,10 @@
         <Button
             android:id="@+id/x1"
             android:layout_width="43dp"
-            android:layout_height="40dp"
+            android:layout_height="49dp"
             android:layout_marginStart="3dp"
             android:layout_marginLeft="3dp"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="29dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="x"
@@ -350,25 +351,25 @@
             android:id="@+id/addNewTask"
             android:layout_width="178dp"
             android:layout_height="58dp"
-            android:layout_marginTop="104dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="100dp"
             android:text="Add NewTask"
             app:backgroundTint="#FFCC33"
-            app:layout_constraintEnd_toStartOf="@+id/deletedItems"
-            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/deletedItems"
             android:layout_width="177dp"
             android:layout_height="63dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="132dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="100dp"
             android:text="deletedItems"
             app:backgroundTint="#FFCC33"
-            app:layout_constraintStart_toEndOf="@+id/addNewTask"
-            app:layout_constraintTop_toBottomOf="@+id/timetobeadded" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <RadioButton
             android:id="@+id/checkTask1"
