@@ -181,10 +181,10 @@
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/extraDetails"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <TextView
         android:id="@+id/taskSplitInput"
@@ -195,9 +195,11 @@
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/taskDays"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskDays"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/createNewTaskSubmit"
@@ -256,15 +258,14 @@
         android:id="@+id/levelofimportance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:hint="type 1,2,3,4"
         android:imeOptions="actionDone"
         android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/extraDetails" />
+        app:layout_constraintTop_toBottomOf="@+id/textView57" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

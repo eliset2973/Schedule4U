@@ -183,22 +183,22 @@
         android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moreDetails"
-        app:layout_constraintVertical_bias="0.244" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
         android:id="@+id/TaskSplitInput"
         android:layout_width="148dp"
         android:layout_height="24dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="20dp"
         android:text="Split Task Into # of Days"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/TaskDays"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/TaskDays"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -247,9 +247,9 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="4dp"
         android:text="importance(1-4)"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
@@ -259,9 +259,9 @@
         android:id="@+id/Levelofimportance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="32dp"
         android:hint="1"
         android:imeOptions="actionDone"
         android:inputType="number"
