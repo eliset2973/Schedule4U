@@ -23,18 +23,9 @@
 
 
 
-    ]]>
 
-    <ImageButton
-        android:id="@+id/homebutton10"
-        android:layout_width="92dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homeimage" />
+
+    ]]>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout5"
@@ -43,14 +34,6 @@
         android:theme="@style/Theme.Schedule4U.AppBarOverlay">
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

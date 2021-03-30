@@ -11,6 +11,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class DeletedItems extends AppCompatActivity {
 
@@ -21,6 +24,25 @@ public class DeletedItems extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(), true);
+        List<Activity_S4U> displayList = accessor.lists.deleted;
+
+        if (displayList.size()>0) {
+            TextView textView56 = (TextView) findViewById(R.id.textView56);
+            TextView textView23 = (TextView) findViewById(R.id.textView23);
+            textView56.setText(displayList.get(displayList.size()-1).name);
+            textView23.setText(displayList.get(displayList.size()-1).details);
+
+        }
+
+//        Intent intent = getIntent();
+//        String Name = intent.getStringExtra("deletedItem");
+//        System.out.print("printing message");
+//        System.out.print(Name);
+//        TextView textView56 = (TextView) findViewById(R.id.textView56);
+//        textView56.setText(Name);
+
 //        FloatingActionButton fab = findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -30,17 +52,6 @@ public class DeletedItems extends AppCompatActivity {
 //            }
 //        });
 
-        //for some reason I'm having trouble linking the button to the proper page.
-        //when you link it to a page like the ToDos or something, it works fine. But not
-        //for the class that I just created
-        Button homeFromDelete = (Button) findViewById(R.id.HomeButton);
-        homeFromDelete.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), MainActivity.class);
-                startActivityForResult(myIntent, 0);
-            }
-
-        });
 
         //Be careful! This is code for image button not ordinarily button//
         ImageButton homebutton_2= (ImageButton) findViewById(R.id.homebutton2);
@@ -50,6 +61,22 @@ public class DeletedItems extends AppCompatActivity {
                 startActivityForResult(myIntent, 0);
             }
         });
+
         //Be careful! This is code for image button not ordinarily button//
+
     }
+
+    protected void displayDataFromSave() {
+        // Starting code for transfering data across activities and displaying it =-----------------
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(
+                getApplicationContext(), true);
+        List<Activity_S4U> displayList = accessor.lists.deleted;
+
+        if (displayList.size()>0) {
+            TextView textView56 = (TextView) findViewById(R.id.textView56);
+            textView56.setText(displayList.get(0).name);
+        }
+
+    }
+
 }

@@ -29,8 +29,8 @@ public class Activity_S4U implements java.io.Serializable {
         this.details = "Details placeholder";
         this.splitTask = 1;
         this.completed = false;
-        start_time_string = start_time.toString();
-        end_time_string = end_time.toString();
+        start_time_string = start_time.toString().substring(0,start_time.toString().length()-3);
+        end_time_string = end_time.toString().substring(0,end_time.toString().length()-3);
         importance_string = Integer.toString(importance);
     }
 
@@ -44,8 +44,8 @@ public class Activity_S4U implements java.io.Serializable {
         this.details = "Details placeholder";
         this.splitTask = 1;
         this.completed = false;
-        start_time_string = start_time.toString();
-        end_time_string = end_time.toString();
+        start_time_string = start_time.toString().substring(0,start_time.toString().length()-3);
+        end_time_string = end_time.toString().substring(0,end_time.toString().length()-3);
         importance_string = Integer.toString(importance);
     }
 

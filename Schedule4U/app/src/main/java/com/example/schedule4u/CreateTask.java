@@ -126,6 +126,23 @@ public class CreateTask extends AppCompatActivity{
 //
 //        });
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Activity_S4U currentTask = new Activity_S4U();
+        String start = currentTask.start_time_string;
+        String end = currentTask.end_time_string;
+        if (start.length()>6) {
+            start = currentTask.start_time_string.substring(0,currentTask.start_time_string.length()-3);
+        }
+        if (end.length()>6) {
+            end = currentTask.end_time_string.substring(0,currentTask.end_time_string.length()-3);
+        }
+        TextView startTime = (TextView) findViewById(R.id.startTime);
+        startTime.setText(start);
+        TextView endTime = (TextView) findViewById(R.id.endTime);
+        endTime.setText(end);
 
+    }
 
 }
