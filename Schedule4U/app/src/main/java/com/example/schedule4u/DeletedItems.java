@@ -64,6 +64,28 @@ public class DeletedItems extends AppCompatActivity {
 
         //Be careful! This is code for image button not ordinarily button//
 
+        // re-add third task
+        Button undoDelete = (Button) findViewById(R.id.button6);
+        undoDelete.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                    Activity_S4U CreatedActivity = new Activity_S4U();
+                    Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(), true);
+                    List<Activity_S4U> activeList = accessor.lists.active;
+                    TextView textView56 = (TextView) findViewById(R.id.textView56);
+                    TextView textView23 = (TextView) findViewById(R.id.textView23);
+
+                    textView56.setText("no deleted items");
+                    textView23.setText("");
+                    activeList.add(displayList.get(displayList.size()-1));
+                    displayList.remove(2);
+
+                    // save
+                    accessor.save(getApplicationContext());
+
+            }
+        });
+
     }
 
     protected void displayDataFromSave() {
