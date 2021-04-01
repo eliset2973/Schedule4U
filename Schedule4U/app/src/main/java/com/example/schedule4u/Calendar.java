@@ -19,39 +19,40 @@ import android.widget.TextView;
 import java.util.List;
 
 public class Calendar extends AppCompatActivity {
-@Override
-protected void onResume() {
-    super.onResume();
-    // change to content layout
-    Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(),true);
-    List<Activity_S4U> displayList = accessor.lists.active;
-    TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
-    TextView textViewCalendarActivityName2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
-    TextView textViewCalendarActivityName3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
-    if (displayList.size()>0) {
-        textViewCalendarActivityName1.setText(displayList.get(0).name);
-        //System.out.println(displayList.get(0).name);
-    } else {
-        textViewCalendarActivityName1.setText("");
-    }
-
-    try {
-        if (displayList.size()>1) {
-            textViewCalendarActivityName2.setText(displayList.get(1).name);
+    public void setDisplayListApril1() {
+        Activity_S4U_Data_Accessor accessor = new Activity_S4U_Data_Accessor(getApplicationContext(), true);
+        List<Activity_S4U> displayList = accessor.lists.active;
+        TextView textViewCalendarActivityName1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+        TextView textViewCalendarActivityName2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
+        TextView textViewCalendarActivityName3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
+        if (displayList.size() > 0) {
+            textViewCalendarActivityName1.setText(displayList.get(0).name);
+            //System.out.println(displayList.get(0).name);
         } else {
-            textViewCalendarActivityName2.setText("");
-        }
-        if (displayList.size()>2) {
-            textViewCalendarActivityName3.setText(displayList.get(2).name);
-        } else {
-            textViewCalendarActivityName3.setText("");
+            textViewCalendarActivityName1.setText("");
         }
 
-    } catch (Exception e) {
-        e.printStackTrace();
+        try {
+            if (displayList.size() > 1) {
+                textViewCalendarActivityName2.setText(displayList.get(1).name);
+            } else {
+                textViewCalendarActivityName2.setText("");
+            }
+            if (displayList.size() > 2) {
+                textViewCalendarActivityName3.setText(displayList.get(2).name);
+            } else {
+                textViewCalendarActivityName3.setText("");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // change to content layout
+        setDisplayListApril1();
     CalendarView myCalendar = (CalendarView) findViewById(R.id.calendarView);
     long myDate = myCalendar.getDate();
     System.out.println (myDate);
@@ -94,21 +95,31 @@ protected void onResume() {
                 String  curDate = String.valueOf(dayOfMonth);
                 String  Year = String.valueOf(year);
                 String  Month = String.valueOf(month);
-                if (curDate.equals("2")){
+                if (curDate.equals("1")){
+                    setDisplayListApril1();
+                }
+                else if (curDate.equals("2")){
                     TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
                     activity1.setText("Cook burgers");
                     TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
                     activity2.setText("Write essay");
                     TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
-                    activity2.setText("See grandma");
+                    activity3.setText("See grandma");
                 }
-                if (curDate.equals("3")){
+                else if (curDate.equals("3")){
                     TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
                     activity1.setText("Clean apartment");
                     TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
                     activity2.setText("Hang out with Lily");
                     TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
-                    activity2.setText("Call mum");
+                    activity3.setText("Call mum");
+                } else {
+                    TextView activity1 = (TextView) findViewById(R.id.textViewCalendarActivityName1);
+                    activity1.setText(" ");
+                    TextView activity2 = (TextView) findViewById(R.id.textViewCalendarActivityName2);
+                    activity2.setText(" ");
+                    TextView activity3 = (TextView) findViewById(R.id.textViewCalendarActivityName3);
+                    activity3.setText(" ");
                 }
 
 
